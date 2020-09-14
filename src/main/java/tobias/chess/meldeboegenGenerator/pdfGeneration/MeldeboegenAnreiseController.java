@@ -1,5 +1,6 @@
 package tobias.chess.meldeboegenGenerator.pdfGeneration;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -15,8 +16,15 @@ public class MeldeboegenAnreiseController {
 	}
 	
 	@GetMapping("generateAnreiseBogen")
-	public void generateAnreiseBogen() throws JRException {
-		pdfGenerator.generateReport();
+	public ResponseEntity<PdfGenerationResult> generateAnreiseBogen() throws JRException {
+		PdfGenerationResult result = pdfGenerator.generateReport(MeldeboegenType.ANREISE);
+		return new ResponseEntity<>(result, result.getResultCode());
+	}
+	
+	@GetMapping("generateRundeBogen")
+	public ResponseEntity<PdfGenerationResult> generateRundeBogen() throws JRException {
+		PdfGenerationResult result = pdfGenerator.generateReport(MeldeboegenType.ROUND);
+		return new ResponseEntity<>(result, result.getResultCode());
 	}
 
 }

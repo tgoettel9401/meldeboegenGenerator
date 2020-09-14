@@ -2,10 +2,10 @@ package tobias.chess.meldeboegenGenerator.pdfGeneration;
 
 import java.io.File;
 import java.io.InputStream;
-import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
@@ -14,7 +14,6 @@ import com.google.common.collect.Maps;
 import net.sf.jasperreports.engine.JREmptyDataSource;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperCompileManager;
-import net.sf.jasperreports.engine.JasperExportManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
 import net.sf.jasperreports.engine.JasperReport;
@@ -28,67 +27,142 @@ import tobias.chess.meldeboegenGenerator.team.TeamService;
 @Service
 public class MeldeboegenAnreiseGenerator {
 	
+	private final String saveBasePath = "C:/jasperoutput";
+	
 	private final TeamService teamService;
 	
 	public MeldeboegenAnreiseGenerator(TeamService teamService) {
 		this.teamService = teamService;
 	}
 	
-	public void generateReport() throws JRException {
+	public PdfGenerationResult generateReport(MeldeboegenType meldeboegenType) throws JRException {
 		
 		// Import all Teams with their Players. 
 		List<Team> teams = teamService.findAll();
 		
 		// Load and compile JasperReport
 		InputStream meldeboegenAnreiseReportStream
-		  = getClass().getResourceAsStream("/meldebogen-anreise.jrxml");
+		  = getClass().getResourceAsStream("/" + meldeboegenType.getTemplateFilename());
 		JasperReport jasperReport
 		  = JasperCompileManager.compileReport(meldeboegenAnreiseReportStream);
 		
-		List<JasperPrint> jasperPrints = Lists.newArrayList();
-		
-		for (Team team : teams) {
-			
-			Map<String, Object> parameters = Maps.newHashMap();
-			parameters.put("title", "Deutsche Ländermeisterschaft 2020");
-			parameters.put("teamName", team.getName());
-			
-			List<Player> players = team.getPlayers();
-			players.sort(Comparator.comparingInt(Player::getDwzRating).reversed());
-
-			Integer playerNumber = 1;
-			for (Player player : players) {
-				String playerString = player.getAgeGroup() + ",  " + player.getName() + ",  " + player.getDwzRating();
-				parameters.put("player" + playerNumber, playerString);
-				playerNumber++;
-			}
-			
-			JasperPrint jasperPrint = JasperFillManager.fillReport(
-					  jasperReport, parameters, new JREmptyDataSource());
-			
-			jasperPrints.add(jasperPrint);
-			
-		}
+		// Generate jasperPrint for every team
+		List<JasperPrint> jasperPrints = generateJasperPrints(jasperReport, meldeboegenType, teams);
 		
 		// Make sure the output directory exists.
-		File outDir = new File("C:/jasperoutput");
+		File outDir = new File(saveBasePath);
 		outDir.mkdirs();
 		
 		// Export to PDF.
 		JRPdfExporter exporter = new JRPdfExporter();
 		exporter.setExporterInput(SimpleExporterInput.getInstance(jasperPrints));
-		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput("C:/jasperoutput/Meldeboegen-Anreise.pdf"));
+		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(saveBasePath + "/" + meldeboegenType.getFilename()));
 		exporter.exportReport();
- 
-		/*
-		// Export to PDF.
-		JasperExportManager.exportReportToPdfFile(jasperPrint,
-               "C:/jasperoutput/Meldebogen-Anreise-" + team.getName() + ".pdf");
-		*/
 		
+		PdfGenerationResult result = new PdfGenerationResult();
+		result.setResultCode(HttpStatus.OK);
+		result.setMessage("The final document has been saved to folder " + saveBasePath + " with the filename " + meldeboegenType.getFilename());
         
 		System.out.println("Done!");
+		
+		return result;
 
+		
+	}
+	
+	private List<JasperPrint> generateJasperPrints(JasperReport jasperReport, MeldeboegenType meldeboegenType, List<Team> teams) throws JRException {
+		
+		List<JasperPrint> jasperPrints = Lists.newArrayList();
+		
+		if (meldeboegenType.equals(MeldeboegenType.ANREISE)) {
+			
+			// For every team generate exactly one Meldebogen. 
+			for (Team team : teams) {
+				Map<String, Object> parameters = generateParameters(meldeboegenType, team, null);
+				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new JREmptyDataSource());
+				jasperPrints.add(jasperPrint);
+			}
+			
+		}
+		
+		else { // MeldeboegenType = ROUND
+			
+			// A Meldebogen contains always two teams, hence we need NUMBER_OF_TEAMS / 2 (rounded up) Meldeboegen. 
+			int numberOfTeams = teams.size();
+			int numberOfMeldeboegen = (int) Math.ceil(numberOfTeams / 2.0);
+			
+			Map<String, Object> parameters = Maps.newHashMap();
+			for (int i = 0; i < numberOfMeldeboegen; i++) {
+				Integer team1Index = i*2;
+				if (team1Index+1 <= numberOfTeams) {
+					Team team1 = teams.get(team1Index);
+					parameters.putAll(generateParameters(meldeboegenType, team1, 1));
+				}
+				Integer team2Index = i*2+1;
+				if (team2Index+1 <= numberOfTeams) {
+					Team team2 = teams.get(team2Index);
+					parameters.putAll(generateParameters(meldeboegenType, team2, 2));
+				}
+				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,  parameters, new JREmptyDataSource());
+				jasperPrints.add(jasperPrint);
+			}
+			
+		}
+		
+		return jasperPrints;
+		
+	}
+	
+	/**
+	 * Generates the parameters dependent on meldeboegenType. For Anreise-Boegen this is called once, 
+	 * for Round-Boegen called twice (once for every team). TeamNumber may be null if meldeboegenType
+	 * is ANREISE.
+	 * @param meldeboegenType
+	 * @param team
+	 * @return Map<String, Object>
+	 */
+	private Map<String, Object> generateParameters(MeldeboegenType meldeboegenType, Team team, Integer teamNumber) {
+		
+		Map<String, Object> parameters = Maps.newHashMap();
+		
+		if (meldeboegenType.equals(MeldeboegenType.ANREISE)) {
+			
+			parameters.put("title", "Deutsche Ländermeisterschaft 2020");
+			parameters.put("teamName", team.getName());
+
+			Integer playerNumber = 1;
+			for (Player player : team.getPlayers()) {
+				String playerString = player.getAgeGroup() + " / " + player.getName() + " / " + player.getDwzRating();
+				parameters.put("player" + playerNumber, playerString);
+				playerNumber++;
+			}
+			
+			// If playerNumber stayed lower than 25, then the players have to be initialized with "".
+			for (; playerNumber <= 25; playerNumber++) {
+				parameters.put("player" + playerNumber, "");
+			}
+			
+		}
+		
+		else { // MeldeboegenType = ROUND
+			
+			parameters.put("team" + teamNumber + ".name", team.getName());
+
+			Integer playerNumber = 1;
+			for (Player player : team.getPlayers()) {
+				String playerString = player.getName() + " / " + player.getAgeGroup();
+				parameters.put("team" + teamNumber + ".player" + playerNumber, playerString);
+				playerNumber++;
+			}
+			
+			// If playerNumber stayed lower than 10, then the players have to be initialized with "".
+			for (; playerNumber <= 8; playerNumber++) {
+				parameters.put("team" + teamNumber + ".player" + playerNumber, "");
+			}
+			
+		}
+		
+		return parameters;
 		
 	}
 

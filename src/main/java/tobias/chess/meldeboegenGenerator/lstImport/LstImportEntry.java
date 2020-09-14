@@ -26,5 +26,7 @@ public class LstImportEntry {
 	private String ignored10;
 	private String ignored11;
 	private String ignored12;
+	private String ignored13;
+	private String ignored14;
 
 }

@@ -52,6 +52,8 @@ public class LstImportService {
 				.addColumn("ignored10")
 				.addColumn("ignored11")
 				.addColumn("ignored12")
+				.addColumn("ignored13")
+				.addColumn("ignored14")
 				.build();
 		List<LstImportEntry> csvEntries = csvMapper
 				.readerFor(LstImportEntry.class)
