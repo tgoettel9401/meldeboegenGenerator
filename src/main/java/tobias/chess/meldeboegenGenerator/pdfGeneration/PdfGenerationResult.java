@@ -9,5 +9,6 @@ public class PdfGenerationResult {
 	
 	private String message; 
 	private HttpStatus resultCode;
+	private byte[] fileByteArray;
 
 }

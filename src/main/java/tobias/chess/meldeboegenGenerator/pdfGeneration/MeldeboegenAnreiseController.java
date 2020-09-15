@@ -16,15 +16,39 @@ public class MeldeboegenAnreiseController {
 	}
 	
 	@GetMapping("generateAnreiseBogen")
-	public ResponseEntity<PdfGenerationResult> generateAnreiseBogen() throws JRException {
+	public ResponseEntity<byte[]> generateAnreiseBogen() throws JRException {
 		PdfGenerationResult result = pdfGenerator.generateReport(MeldeboegenType.ANREISE);
-		return new ResponseEntity<>(result, result.getResultCode());
+		
+		if (result.getResultCode().isError()) {
+			System.out.println("Exporting ANREISE was not successful");
+			System.out.println("Message is: " + result.getMessage());
+		}
+		else {
+			System.out.println("Exporting ANREISE was successful");
+		}
+			
+		return ResponseEntity.ok()
+				.header("Content-Type", "application/pdf; charset=UTF-8")
+				.header("Content-Disposition", "inline; filename=\"" + MeldeboegenType.ANREISE.getFilename() + "\"")
+				.body(result.getFileByteArray());
 	}
 	
 	@GetMapping("generateRundeBogen")
-	public ResponseEntity<PdfGenerationResult> generateRundeBogen() throws JRException {
+	public ResponseEntity<byte[]> generateRundeBogen() throws JRException {
 		PdfGenerationResult result = pdfGenerator.generateReport(MeldeboegenType.ROUND);
-		return new ResponseEntity<>(result, result.getResultCode());
+		
+		if (result.getResultCode().isError()) {
+			System.out.println("Exporting ANREISE was not successful");
+			System.out.println("Message is: " + result.getMessage());
+		}
+		else {
+			System.out.println("Exporting ANREISE was successful");
+		}
+			
+		return ResponseEntity.ok()
+				.header("Content-Type", "application/pdf; charset=UTF-8")
+				.header("Content-Disposition", "inline; filename=\"" + MeldeboegenType.ROUND.getFilename() + "\"")
+				.body(result.getFileByteArray());
 	}
 
 }

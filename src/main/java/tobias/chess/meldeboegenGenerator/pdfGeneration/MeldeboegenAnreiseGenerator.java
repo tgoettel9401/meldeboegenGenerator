@@ -1,5 +1,6 @@
 package tobias.chess.meldeboegenGenerator.pdfGeneration;
 
+import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
 import java.util.List;
@@ -20,6 +21,7 @@ import net.sf.jasperreports.engine.JasperReport;
 import net.sf.jasperreports.engine.export.JRPdfExporter;
 import net.sf.jasperreports.export.SimpleExporterInput;
 import net.sf.jasperreports.export.SimpleOutputStreamExporterOutput;
+import net.sf.jasperreports.export.SimplePdfExporterConfiguration;
 import tobias.chess.meldeboegenGenerator.player.Player;
 import tobias.chess.meldeboegenGenerator.team.Team;
 import tobias.chess.meldeboegenGenerator.team.TeamService;
@@ -54,15 +56,21 @@ public class MeldeboegenAnreiseGenerator {
 		outDir.mkdirs();
 		
 		// Export to PDF.
+		ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
 		JRPdfExporter exporter = new JRPdfExporter();
 		exporter.setExporterInput(SimpleExporterInput.getInstance(jasperPrints));
-		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(saveBasePath + "/" + meldeboegenType.getFilename()));
+		//exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(saveBasePath + "/" + meldeboegenType.getFilename()));
+		exporter.setExporterOutput(new SimpleOutputStreamExporterOutput(outputStream));
+		SimplePdfExporterConfiguration configuration = new SimplePdfExporterConfiguration();
+		//set your configuration
+		exporter.setConfiguration(configuration);
 		exporter.exportReport();
 		
 		PdfGenerationResult result = new PdfGenerationResult();
 		result.setResultCode(HttpStatus.OK);
 		result.setMessage("The final document has been saved to folder " + saveBasePath + " with the filename " + meldeboegenType.getFilename());
-        
+        result.setFileByteArray(outputStream.toByteArray());
+		
 		System.out.println("Done!");
 		
 		return result;
