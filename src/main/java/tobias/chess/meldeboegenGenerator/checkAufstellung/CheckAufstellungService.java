@@ -38,12 +38,13 @@ public class CheckAufstellungService {
 		// Check Aufstellungen for every team. 
 		for (Team team : teams) {
 			CheckResponse checkForTeam = checkAufstellungForTeam(team);
+			teamCheckMap.put(team.getName(), checkForTeam);
 		}
 		
 		return teamCheckMap;
 	}
 	
-	private CheckResponse checkAufstellungForTeam(Team team) {
+	CheckResponse checkAufstellungForTeam(Team team) {
 
 		// Check 200er-Border for every team. 
 		DetailedCheckResponse dwz200Response = check200erBorder(team);
@@ -69,7 +70,7 @@ public class CheckAufstellungService {
 			
 			if (previousPlayer != null) {
 				Integer differenceBetweenPlayersInDWZ = previousPlayer.getDwzRating() - player.getDwzRating();
-				if (differenceBetweenPlayersInDWZ < 200) {
+				if (Math.abs(differenceBetweenPlayersInDWZ) > 200) {
 					response.setStatus(CheckResponseStatus.ERROR);
 					response.setMessage("Checking DWZ 200er Border has failed for player " + player.getName() + 
 							" and previous player " + previousPlayer.getName());
@@ -134,8 +135,9 @@ public class CheckAufstellungService {
 		}
 		
 		// Check if all ageGroupEntries can be added by one of those. 
-		// TODO: Improve checking algorithm. 
-		for (AgeGroup missingAgeGroup : missingAgeGroups) {
+		// TODO: Improve checking algorithm.
+		List<AgeGroup> tempMissingAgeGroups = Lists.newArrayList(missingAgeGroups);
+		for (AgeGroup missingAgeGroup : tempMissingAgeGroups) {
 			for (Entry<AgeGroup, Integer> ageGroupEntry : ageGroupsContainedAtLeastTwice.entrySet()) {
 				if (ageGroupEntry.getKey().isGroupAllowed(missingAgeGroup)) {
 					missingAgeGroups.remove(missingAgeGroup);

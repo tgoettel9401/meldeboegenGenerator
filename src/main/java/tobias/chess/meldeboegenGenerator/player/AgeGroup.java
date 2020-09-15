@@ -3,11 +3,12 @@ package tobias.chess.meldeboegenGenerator.player;
 import java.util.Arrays;
 import java.util.List;
 
+import com.google.common.collect.Lists;
 import lombok.Getter;
 
 @Getter
 public enum AgeGroup {
-	U20 (null), 
+	U20 (Lists.newArrayList()),
 	U18 (Arrays.asList(U20)), 
 	U16 (Arrays.asList(U18, U20)), 
 	U14 (Arrays.asList(U16, U18, U20)), 
