@@ -99,8 +99,8 @@ public class MeldeboegenAnreiseGenerator {
 			int numberOfTeams = teams.size();
 			int numberOfMeldeboegen = (int) Math.ceil(numberOfTeams / 2.0);
 			
-			Map<String, Object> parameters = Maps.newHashMap();
 			for (int i = 0; i < numberOfMeldeboegen; i++) {
+				Map<String, Object> parameters = Maps.newHashMap();
 				Integer team1Index = i*2;
 				if (team1Index+1 <= numberOfTeams) {
 					Team team1 = teams.get(team1Index);
@@ -164,7 +164,7 @@ public class MeldeboegenAnreiseGenerator {
 			}
 			
 			// If playerNumber stayed lower than 10, then the players have to be initialized with "".
-			for (; playerNumber <= 8; playerNumber++) {
+			for (; playerNumber <= 10; playerNumber++) {
 				parameters.put("team" + teamNumber + ".player" + playerNumber, "");
 			}
 			

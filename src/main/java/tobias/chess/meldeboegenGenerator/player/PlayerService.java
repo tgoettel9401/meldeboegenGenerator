@@ -50,6 +50,9 @@ public class PlayerService {
 		if (lstImportBirthday.startsWith("00.00")) {
 			lstImportBirthday= lstImportBirthday.replace("00.00", "01.01");
 		}
+		if (lstImportBirthday.length() == 4) {
+			lstImportBirthday = "01.01." + lstImportBirthday;
+		}
 		LocalDate birthDayInLocalDate = LocalDate.parse(lstImportBirthday, germanFormatter);
 		return birthDayInLocalDate;
 	}
