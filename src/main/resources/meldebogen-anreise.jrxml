@@ -4,31 +4,81 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<parameter name="title" class="java.lang.String"/>
 	<parameter name="teamName" class="java.lang.String"/>
-	<parameter name="player1" class="java.lang.String"/>
-	<parameter name="player2" class="java.lang.String"/>
-	<parameter name="player3" class="java.lang.String"/>
-	<parameter name="player4" class="java.lang.String"/>
-	<parameter name="player5" class="java.lang.String"/>
-	<parameter name="player6" class="java.lang.String"/>
-	<parameter name="player7" class="java.lang.String"/>
-	<parameter name="player8" class="java.lang.String"/>
-	<parameter name="player9" class="java.lang.String"/>
-	<parameter name="player10" class="java.lang.String"/>
-	<parameter name="player11" class="java.lang.String"/>
-	<parameter name="player12" class="java.lang.String"/>
-	<parameter name="player13" class="java.lang.String"/>
-	<parameter name="player14" class="java.lang.String"/>
-	<parameter name="player15" class="java.lang.String"/>
-	<parameter name="player16" class="java.lang.String"/>
-	<parameter name="player17" class="java.lang.String"/>
-	<parameter name="player18" class="java.lang.String"/>
-	<parameter name="player19" class="java.lang.String"/>
-	<parameter name="player20" class="java.lang.String"/>
-	<parameter name="player21" class="java.lang.String"/>
-	<parameter name="player22" class="java.lang.String"/>
-	<parameter name="player23" class="java.lang.String"/>
-	<parameter name="player24" class="java.lang.String"/>
-	<parameter name="player25" class="java.lang.String"/>
+	<parameter name="player1.name" class="java.lang.String"/>
+	<parameter name="player1.dwz" class="java.lang.String"/>
+	<parameter name="player1.ageGroup" class="java.lang.String"/>
+	<parameter name="player2.name" class="java.lang.String"/>
+	<parameter name="player2.dwz" class="java.lang.String"/>
+	<parameter name="player2.ageGroup" class="java.lang.String"/>
+	<parameter name="player3.name" class="java.lang.String"/>
+	<parameter name="player3.dwz" class="java.lang.String"/>
+	<parameter name="player3.ageGroup" class="java.lang.String"/>
+	<parameter name="player4.name" class="java.lang.String"/>
+	<parameter name="player4.dwz" class="java.lang.String"/>
+	<parameter name="player4.ageGroup" class="java.lang.String"/>
+	<parameter name="player5.name" class="java.lang.String"/>
+	<parameter name="player5.dwz" class="java.lang.String"/>
+	<parameter name="player5.ageGroup" class="java.lang.String"/>
+	<parameter name="player6.name" class="java.lang.String"/>
+	<parameter name="player6.dwz" class="java.lang.String"/>
+	<parameter name="player6.ageGroup" class="java.lang.String"/>
+	<parameter name="player7.name" class="java.lang.String"/>
+	<parameter name="player7.dwz" class="java.lang.String"/>
+	<parameter name="player7.ageGroup" class="java.lang.String"/>
+	<parameter name="player8.name" class="java.lang.String"/>
+	<parameter name="player8.dwz" class="java.lang.String"/>
+	<parameter name="player8.ageGroup" class="java.lang.String"/>
+	<parameter name="player9.name" class="java.lang.String"/>
+	<parameter name="player9.dwz" class="java.lang.String"/>
+	<parameter name="player9.ageGroup" class="java.lang.String"/>
+	<parameter name="player10.name" class="java.lang.String"/>
+	<parameter name="player10.dwz" class="java.lang.String"/>
+	<parameter name="player10.ageGroup" class="java.lang.String"/>
+	<parameter name="player11.name" class="java.lang.String"/>
+	<parameter name="player11.dwz" class="java.lang.String"/>
+	<parameter name="player11.ageGroup" class="java.lang.String"/>
+	<parameter name="player12.name" class="java.lang.String"/>
+	<parameter name="player12.dwz" class="java.lang.String"/>
+	<parameter name="player12.ageGroup" class="java.lang.String"/>
+	<parameter name="player13.name" class="java.lang.String"/>
+	<parameter name="player13.dwz" class="java.lang.String"/>
+	<parameter name="player13.ageGroup" class="java.lang.String"/>
+	<parameter name="player14.name" class="java.lang.String"/>
+	<parameter name="player14.dwz" class="java.lang.String"/>
+	<parameter name="player14.ageGroup" class="java.lang.String"/>
+	<parameter name="player15.name" class="java.lang.String"/>
+	<parameter name="player15.dwz" class="java.lang.String"/>
+	<parameter name="player15.ageGroup" class="java.lang.String"/>
+	<parameter name="player16.name" class="java.lang.String"/>
+	<parameter name="player16.dwz" class="java.lang.String"/>
+	<parameter name="player16.ageGroup" class="java.lang.String"/>
+	<parameter name="player17.name" class="java.lang.String"/>
+	<parameter name="player17.dwz" class="java.lang.String"/>
+	<parameter name="player17.ageGroup" class="java.lang.String"/>
+	<parameter name="player18.name" class="java.lang.String"/>
+	<parameter name="player18.dwz" class="java.lang.String"/>
+	<parameter name="player18.ageGroup" class="java.lang.String"/>
+	<parameter name="player19.name" class="java.lang.String"/>
+	<parameter name="player19.dwz" class="java.lang.String"/>
+	<parameter name="player19.ageGroup" class="java.lang.String"/>
+	<parameter name="player20.name" class="java.lang.String"/>
+	<parameter name="player20.dwz" class="java.lang.String"/>
+	<parameter name="player20.ageGroup" class="java.lang.String"/>
+	<parameter name="player21.name" class="java.lang.String"/>
+	<parameter name="player21.dwz" class="java.lang.String"/>
+	<parameter name="player21.ageGroup" class="java.lang.String"/>
+	<parameter name="player22.name" class="java.lang.String"/>
+	<parameter name="player22.dwz" class="java.lang.String"/>
+	<parameter name="player22.ageGroup" class="java.lang.String"/>
+	<parameter name="player23.name" class="java.lang.String"/>
+	<parameter name="player23.dwz" class="java.lang.String"/>
+	<parameter name="player23.ageGroup" class="java.lang.String"/>
+	<parameter name="player24.name" class="java.lang.String"/>
+	<parameter name="player24.dwz" class="java.lang.String"/>
+	<parameter name="player24.ageGroup" class="java.lang.String"/>
+	<parameter name="player25.name" class="java.lang.String"/>
+	<parameter name="player25.dwz" class="java.lang.String"/>
+	<parameter name="player25.ageGroup" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -348,7 +398,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player1}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player1.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="310" width="200" height="20" uuid="8865f56f-9432-4a7b-886d-0af25cb86a2d">
@@ -358,7 +408,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player2}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player2.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="330" width="200" height="20" uuid="c415913e-e4c4-4197-92f5-b230457ece06">
@@ -368,7 +418,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player3}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player3.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="350" width="200" height="20" uuid="fb23c4df-5286-4ac8-bcf5-0ed093c0405c">
@@ -378,7 +428,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player4}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player4.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="370" width="200" height="20" uuid="6b639323-f270-4e99-85e5-7a5f0297abad">
@@ -388,7 +438,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player5}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player5.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="390" width="200" height="20" uuid="ce3fe475-17c9-42eb-bfab-21cf7c2d320d">
@@ -398,7 +448,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player6}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player6.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="410" width="200" height="20" uuid="540575ee-2237-4c53-8843-5e2baf315d92">
@@ -408,7 +458,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player7}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player7.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="430" width="200" height="20" uuid="5e7dcac3-5d50-464a-af66-fec395a6bc8c">
@@ -418,7 +468,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player8}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player8.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="450" width="200" height="20" uuid="6f9cd970-f046-417a-9c4f-bbcd1fc5fe3f">
@@ -428,7 +478,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player9}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player9.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="470" width="200" height="20" uuid="b2a451f6-1cdf-48f8-b65d-fb9c48d7272e">
@@ -438,7 +488,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player10}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player10.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="490" width="200" height="20" uuid="f214d99f-ca81-4473-8186-706d8994669e">
@@ -448,7 +498,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player11}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player11.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="510" width="200" height="20" uuid="cb38a980-b5cd-4749-8be1-4664f7cc3ac8">
@@ -458,7 +508,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player12}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player12.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="61" y="530" width="200" height="20" uuid="65051227-87b2-4c34-b314-eda8343e7afd">
@@ -468,7 +518,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player13}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player13.name}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="319" y="270" width="200" height="20" uuid="98c88f9e-e43b-434e-b182-35742746a085">
@@ -659,7 +709,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player14}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player14.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="310" width="200" height="20" uuid="59db44d7-1a1f-407d-bddb-e0881a70604d">
@@ -669,7 +719,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player15}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player15.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="330" width="200" height="20" uuid="baa44f1f-d5d6-4f6f-9868-cb88937c59a3">
@@ -679,7 +729,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player16}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player16.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="350" width="200" height="20" uuid="bcdc01d3-ba2c-4ef2-8fe5-68168ce2dcd6">
@@ -689,7 +739,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player17}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player17.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="370" width="200" height="20" uuid="b02f78b3-71b2-48e4-aa23-70e4ab1cc78e">
@@ -699,7 +749,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player18}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player18.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="390" width="200" height="20" uuid="fa80766c-953e-44d2-8b55-1f8151292d60">
@@ -709,7 +759,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player19}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player19.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="410" width="200" height="20" uuid="5f7f8388-c8b5-4160-8b14-7cbfab924b5f">
@@ -719,7 +769,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player20}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player20.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="430" width="200" height="20" uuid="cbb08784-4a26-4d27-b5fb-500a382a341a">
@@ -729,7 +779,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player21}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player21.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="450" width="200" height="20" uuid="4408945b-c051-4257-9c15-6b2ff8f178cf">
@@ -739,7 +789,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player22}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player22.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="470" width="200" height="20" uuid="196e181f-28d0-4c41-a8e1-d67c535e053e">
@@ -749,7 +799,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player23}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player23.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="490" width="200" height="20" uuid="6d665cc4-fd9d-4cfc-8f9f-e77730634ef6">
@@ -759,7 +809,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player24}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player24.name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="319" y="510" width="200" height="20" uuid="33bfa047-b942-4ece-b735-2f90bc87b1b8">
@@ -769,7 +819,7 @@
 					<bottomPen lineWidth="1.0"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player25}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player25.name}]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="20" y="570" width="510" height="90" uuid="d4752349-4864-4b98-9fb7-25bfca41fec1"/>
@@ -793,6 +843,256 @@
 				</box>
 				<text><![CDATA[Unterschrift der Mannschaftsbegleitung]]></text>
 			</staticText>
+			<textField>
+				<reportElement x="60" y="290" width="40" height="20" uuid="67cc1014-c551-4db1-acc4-044209f25248"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player1.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="290" width="40" height="20" uuid="34daad8c-ceed-4aaf-a8fa-c41ecfa65541"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player1.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="310" width="40" height="20" uuid="e7389c45-cbe1-4479-a839-5dcea44a8748"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player2.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="310" width="40" height="20" uuid="90cb2640-78c4-43d6-86f4-2e2617abd56c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player2.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="330" width="40" height="20" uuid="d0824004-f2e5-468b-9e02-3dfb249c6215"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player3.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="330" width="40" height="20" uuid="3be0e7c4-529a-46b3-9b29-efa15c776efa"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player3.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="350" width="40" height="20" uuid="7b8982f6-0519-4dec-88b9-3eed2a182e4d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player4.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="350" width="40" height="20" uuid="4d49e160-a28f-4977-880e-60ac862bb620"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player4.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="370" width="40" height="20" uuid="6a233120-7b9c-433b-ada6-788e06dbf92d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player5.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="370" width="40" height="20" uuid="7addb9dd-45e9-45a5-9b66-3894286c060c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player5.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="390" width="40" height="20" uuid="9e3a46ab-f10a-47f9-bbe2-94eb418f80e7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player6.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="390" width="40" height="20" uuid="4b7965de-0a25-4a7a-9844-f3e849f414a7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player6.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="410" width="40" height="20" uuid="1e3d2bdd-1798-47cd-9e90-dcf576aaee6f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player7.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="410" width="40" height="20" uuid="4d8a1473-819b-4327-b9cb-b08c9eb32d21"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player7.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="430" width="40" height="20" uuid="ad3d08c9-5566-4016-9276-d2f237f601ff"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player8.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="430" width="40" height="20" uuid="953f8db2-fe17-4bad-b96e-f2f3aa80d2e4"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player8.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="450" width="40" height="20" uuid="c5cf5e3a-c255-4bc2-9c4a-31e069c6588f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player9.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="450" width="40" height="20" uuid="43faa504-a5f7-4f5b-88c2-4ab161c2f0b8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player9.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="470" width="40" height="20" uuid="566e525a-bed8-411a-9329-f4488e34e0ae"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player10.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="470" width="40" height="20" uuid="79afda45-6fa8-4e8e-822c-4a9363eeee3e"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player10.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="490" width="40" height="20" uuid="7aca0c3f-f9e8-4495-a477-1cf360e53ff0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player11.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="490" width="40" height="20" uuid="b71071c3-0788-4d0b-8d79-37d444c4785c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player11.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="510" width="40" height="20" uuid="56dcd9f5-9749-414f-bf0b-24b82f1ae8e1"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player12.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="510" width="40" height="20" uuid="bfc03c17-9bdc-48cf-9995-4a2674a2862a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player12.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="60" y="530" width="40" height="20" uuid="8d64736c-9170-495e-88e8-8223f9eae3fd"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player13.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="221" y="530" width="40" height="20" uuid="363b34a3-a1c3-40c3-a29a-f8a8cfa28567"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player13.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="290" width="40" height="20" uuid="e8da0034-534c-4de4-811d-a91508e6efe7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player14.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="290" width="40" height="20" uuid="201f3be3-53e4-48a9-a040-a298f2529f5a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player14.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="310" width="40" height="20" uuid="bf70dd0d-ef11-465d-b3ee-35e80a21f04b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player15.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="310" width="40" height="20" uuid="f7edc216-c3d8-4731-8c21-e9802397ae77"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player15.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="330" width="40" height="20" uuid="b9f000d4-6c27-4983-ae3f-9b1cb0acc022"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player16.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="330" width="40" height="20" uuid="55234cb8-3191-4243-b7e2-ee40b1ec8414"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player16.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="350" width="40" height="20" uuid="b4c90286-cee9-4f26-a5d6-044b699a3fc9"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player17.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="350" width="40" height="20" uuid="311a2948-83e1-4132-b61b-d3fd3aaff088"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player17.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="370" width="40" height="20" uuid="b5bab9ad-bc7e-4881-95f4-c25b3b731b96"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player18.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="370" width="40" height="20" uuid="022c9193-bf5d-475f-99d0-99e2535184c7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player18.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="390" width="40" height="20" uuid="3dc57978-cd3e-485a-a205-b7046b154a9c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player19.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="390" width="40" height="20" uuid="62c5da4a-0956-4c5f-bd01-037f311b999c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player19.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="410" width="40" height="20" uuid="4a8b428e-4477-4019-be6f-3cd28b42d9e3"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player20.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="410" width="40" height="20" uuid="c5a0020a-b1d0-4e3f-b81f-ad62c9cb9fc7"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player20.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="430" width="40" height="20" uuid="8f9eee3a-185e-405c-a984-30fe7717077c"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player21.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="430" width="40" height="20" uuid="db31f1e0-4afd-4a76-9d9f-65ff198a1efc"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player21.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="450" width="40" height="20" uuid="3364a151-a328-494d-823d-b80df3a91e88"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player22.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="450" width="40" height="20" uuid="ae518046-d335-40a7-ae70-dbd562baebe8"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player22.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="470" width="40" height="20" uuid="ff83376c-8d3d-403b-9b27-0fbaa97e1573"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player23.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="470" width="40" height="20" uuid="d155af8c-d491-4e43-9e37-f7975f0735bb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player23.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="490" width="40" height="20" uuid="5776c1c6-ecdb-490d-8813-fc344353bcf6"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player24.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="490" width="40" height="20" uuid="d3c954a2-ee6c-4745-8911-a8bb507588d0"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player24.dwz}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="318" y="510" width="40" height="20" uuid="a7fa8039-3385-40c7-a9b1-34189186a26f"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player25.ageGroup}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="479" y="510" width="40" height="20" uuid="fbbd350a-aa23-4dd4-b37f-adc95b8fba45"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$P{player5.dwz}]]></textFieldExpression>
+			</textField>
 		</band>
 	</detail>
 </jasperReport>

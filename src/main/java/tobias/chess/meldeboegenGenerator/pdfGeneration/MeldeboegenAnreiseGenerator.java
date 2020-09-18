@@ -140,14 +140,18 @@ public class MeldeboegenAnreiseGenerator {
 
 			Integer playerNumber = 1;
 			for (Player player : team.getPlayers()) {
-				String playerString = player.getAgeGroup() + " / " + player.getName() + " / " + player.getDwzRating();
-				parameters.put("player" + playerNumber, playerString);
+				parameters.put("player" + playerNumber + ".name", player.getName());
+				parameters.put("player" + playerNumber + ".dwz", player.getDwzRating().toString());
+				parameters.put("player" + playerNumber + ".ageGroup", player.getAgeGroup().name());
 				playerNumber++;
 			}
 			
 			// If playerNumber stayed lower than 25, then the players have to be initialized with "".
 			for (; playerNumber <= 25; playerNumber++) {
-				parameters.put("player" + playerNumber, "");
+				parameters.put("player" + playerNumber + ".name", "");
+				parameters.put("player" + playerNumber + ".dwz", "");
+				parameters.put("player" + playerNumber + ".ageGroup", "");
+				playerNumber++;
 			}
 			
 		}
