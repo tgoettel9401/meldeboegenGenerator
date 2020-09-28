@@ -151,7 +151,6 @@ public class MeldeboegenAnreiseGenerator {
 				parameters.put("player" + playerNumber + ".name", "");
 				parameters.put("player" + playerNumber + ".dwz", "");
 				parameters.put("player" + playerNumber + ".ageGroup", "");
-				playerNumber++;
 			}
 			
 		}

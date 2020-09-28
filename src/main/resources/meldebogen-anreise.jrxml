@@ -1091,7 +1091,7 @@
 			<textField>
 				<reportElement x="479" y="510" width="40" height="20" uuid="fbbd350a-aa23-4dd4-b37f-adc95b8fba45"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle"/>
-				<textFieldExpression><![CDATA[$P{player5.dwz}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{player25.dwz}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

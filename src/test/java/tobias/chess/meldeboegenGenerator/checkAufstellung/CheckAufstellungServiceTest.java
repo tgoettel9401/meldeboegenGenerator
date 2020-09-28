@@ -1,21 +1,20 @@
 package tobias.chess.meldeboegenGenerator.checkAufstellung;
 
-import com.google.common.collect.Lists;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.mockito.MockitoAnnotations.initMocks;
+
+import java.util.Arrays;
+import java.util.List;
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mockito;
 import org.mockito.Spy;
+
 import tobias.chess.meldeboegenGenerator.player.AgeGroup;
 import tobias.chess.meldeboegenGenerator.player.Player;
 import tobias.chess.meldeboegenGenerator.team.Team;
-
-import java.util.Arrays;
-import java.util.List;
-
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.MockitoAnnotations.initMocks;
 
 class CheckAufstellungServiceTest {
 

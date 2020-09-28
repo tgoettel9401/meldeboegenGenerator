@@ -86,7 +86,7 @@ public class CheckAufstellungService {
 		return response;
 	}
 	
-	private DetailedCheckResponse checkAllAgeGroups(Team team) {
+	public DetailedCheckResponse checkAllAgeGroups(Team team) {
 		
 		DetailedCheckResponse response = new DetailedCheckResponse();
 		response.setCriterium(CheckCriterium.AGE_GROUPS);

@@ -13,6 +13,10 @@ public class TeamService {
 	public TeamService(TeamRepository teamRepository) {
 		this.teamRepository = teamRepository;
 	}
+
+	public Optional<Team> findByName(String name) {
+		return this.teamRepository.findFirstByName(name);
+	}
 	
 	public List<Team> findAll() {
 		return this.teamRepository.findAll();
