@@ -1,7 +1,5 @@
 package tobias.chess.meldeboegenGenerator.lstImport;
 
-import java.time.LocalDate;
-
 import lombok.Data;
 
 @Data

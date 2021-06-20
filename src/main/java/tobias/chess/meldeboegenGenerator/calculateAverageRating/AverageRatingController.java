@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.google.common.collect.Lists;
 import tobias.chess.meldeboegenGenerator.team.Team;
 import tobias.chess.meldeboegenGenerator.team.TeamService;
 

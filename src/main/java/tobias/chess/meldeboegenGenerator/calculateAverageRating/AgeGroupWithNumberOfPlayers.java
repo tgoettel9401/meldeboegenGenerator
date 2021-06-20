@@ -1,7 +1,6 @@
 package tobias.chess.meldeboegenGenerator.calculateAverageRating;
 
 import lombok.Data;
-import tobias.chess.meldeboegenGenerator.calculateAverageRating.ZeroPlayersShouldBeReducedException;
 import tobias.chess.meldeboegenGenerator.player.AgeGroup;
 
 @Data
