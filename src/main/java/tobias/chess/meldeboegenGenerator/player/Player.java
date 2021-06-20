@@ -21,8 +21,8 @@ public class Player {
 	private Team team; 
 	
 	private String name;
-	private Integer eloRating;
-	private Integer dwzRating;
+	private Integer eloRating = 0;
+	private Integer dwzRating = 0;
 	private String fideTitle;
 	private LocalDate birthDay;
 	private Gender gender;

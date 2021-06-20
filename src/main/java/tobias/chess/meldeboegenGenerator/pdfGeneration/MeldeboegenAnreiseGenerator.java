@@ -5,6 +5,7 @@ import java.io.File;
 import java.io.InputStream;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -37,7 +38,7 @@ public class MeldeboegenAnreiseGenerator {
 		this.teamService = teamService;
 	}
 	
-	public PdfGenerationResult generateReport(MeldeboegenType meldeboegenType) throws JRException {
+	public PdfGenerationResult generateReport(MeldeboegenType meldeboegenType, String title) throws JRException {
 		
 		// Import all Teams with their Players. 
 		List<Team> teams = teamService.findAll();
@@ -49,7 +50,7 @@ public class MeldeboegenAnreiseGenerator {
 		  = JasperCompileManager.compileReport(meldeboegenAnreiseReportStream);
 		
 		// Generate jasperPrint for every team
-		List<JasperPrint> jasperPrints = generateJasperPrints(jasperReport, meldeboegenType, teams);
+		List<JasperPrint> jasperPrints = generateJasperPrints(jasperReport, meldeboegenType, teams, title);
 		
 		// Make sure the output directory exists.
 		File outDir = new File(saveBasePath);
@@ -78,19 +79,27 @@ public class MeldeboegenAnreiseGenerator {
 		
 	}
 	
-	private List<JasperPrint> generateJasperPrints(JasperReport jasperReport, MeldeboegenType meldeboegenType, List<Team> teams) throws JRException {
+	private List<JasperPrint> generateJasperPrints(JasperReport jasperReport, MeldeboegenType meldeboegenType, List<Team> teams, String title) throws JRException {
 		
 		List<JasperPrint> jasperPrints = Lists.newArrayList();
 		
-		if (meldeboegenType.equals(MeldeboegenType.ANREISE)) {
+		if (meldeboegenType.equals(MeldeboegenType.ANREISE_DLM)) {
 			
 			// For every team generate exactly one Meldebogen. 
 			for (Team team : teams) {
-				Map<String, Object> parameters = generateParameters(meldeboegenType, team, null);
+				Map<String, Object> parameters = generateParameters(meldeboegenType, team, null, Optional.empty());
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new JREmptyDataSource());
 				jasperPrints.add(jasperPrint);
 			}
 			
+		} else if (meldeboegenType.equals(MeldeboegenType.ANREISE_DVM)) {
+
+			// For every team generate exactly one Meldebogen.
+			for (Team team : teams) {
+				Map<String, Object> parameters = generateParameters(meldeboegenType, team, null, Optional.of(title));
+				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport, parameters, new JREmptyDataSource());
+				jasperPrints.add(jasperPrint);
+			}
 		}
 		
 		else { // MeldeboegenType = ROUND
@@ -104,12 +113,12 @@ public class MeldeboegenAnreiseGenerator {
 				Integer team1Index = i*2;
 				if (team1Index+1 <= numberOfTeams) {
 					Team team1 = teams.get(team1Index);
-					parameters.putAll(generateParameters(meldeboegenType, team1, 1));
+					parameters.putAll(generateParameters(meldeboegenType, team1, 1, Optional.empty()));
 				}
 				Integer team2Index = i*2+1;
 				if (team2Index+1 <= numberOfTeams) {
 					Team team2 = teams.get(team2Index);
-					parameters.putAll(generateParameters(meldeboegenType, team2, 2));
+					parameters.putAll(generateParameters(meldeboegenType, team2, 2, Optional.empty()));
 				}
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,  parameters, new JREmptyDataSource());
 				jasperPrints.add(jasperPrint);
@@ -129,13 +138,13 @@ public class MeldeboegenAnreiseGenerator {
 	 * @param team
 	 * @return Map<String, Object>
 	 */
-	private Map<String, Object> generateParameters(MeldeboegenType meldeboegenType, Team team, Integer teamNumber) {
+	private Map<String, Object> generateParameters(MeldeboegenType meldeboegenType, Team team, Integer teamNumber, Optional<String> titleOptional) {
 		
 		Map<String, Object> parameters = Maps.newHashMap();
 		
-		if (meldeboegenType.equals(MeldeboegenType.ANREISE)) {
+		if (meldeboegenType.equals(MeldeboegenType.ANREISE_DLM)) {
 			
-			parameters.put("title", "Deutsche Ländermeisterschaft 2020");
+			parameters.put("title", "Deutsche Ländermeisterschaft 2021");
 			parameters.put("teamName", team.getName());
 
 			Integer playerNumber = 1;
@@ -153,6 +162,27 @@ public class MeldeboegenAnreiseGenerator {
 				parameters.put("player" + playerNumber + ".ageGroup", "");
 			}
 			
+		} else if (meldeboegenType.equals(MeldeboegenType.ANREISE_DVM)) {
+			titleOptional.ifPresentOrElse(
+					title -> parameters.put("title", title),
+					() -> parameters.put("title", "Deutsche Vereinsmeisterschaft")
+			);
+			parameters.put("teamName", team.getName());
+
+			Integer playerNumber = 1;
+			for (Player player : team.getPlayers()) {
+				parameters.put("player" + playerNumber + ".name", player.getName());
+				parameters.put("player" + playerNumber + ".dwz", player.getDwzRating().toString());
+				parameters.put("player" + playerNumber + ".ageGroup", player.getAgeGroup().name());
+				playerNumber++;
+			}
+
+			// If playerNumber stayed lower than 25, then the players have to be initialized with "".
+			for (; playerNumber <= 25; playerNumber++) {
+				parameters.put("player" + playerNumber + ".name", "");
+				parameters.put("player" + playerNumber + ".dwz", "");
+				parameters.put("player" + playerNumber + ".ageGroup", "");
+			}
 		}
 		
 		else { // MeldeboegenType = ROUND

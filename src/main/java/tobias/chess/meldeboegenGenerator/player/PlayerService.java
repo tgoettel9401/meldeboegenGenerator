@@ -24,8 +24,8 @@ public class PlayerService {
 		Player newPlayer = new Player();
 		newPlayer.setTeam(team);
 		newPlayer.setName(lstImportEntry.getPlayerName());
-		newPlayer.setEloRating(lstImportEntry.getEloRating());
-		newPlayer.setDwzRating(lstImportEntry.getDwzRating());
+		newPlayer.setEloRating(lstImportEntry.getEloRating() != null ? lstImportEntry.getEloRating() : 0);
+		newPlayer.setDwzRating(lstImportEntry.getDwzRating() != null ? lstImportEntry.getDwzRating() : 0);
 		newPlayer.setFideTitle(lstImportEntry.getFideTitle());
 		newPlayer.setGender(Gender.getFromString(lstImportEntry.getGender()));
 		
