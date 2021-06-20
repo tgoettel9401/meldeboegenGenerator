@@ -113,12 +113,12 @@ public class MeldeboegenAnreiseGenerator {
 				Integer team1Index = i*2;
 				if (team1Index+1 <= numberOfTeams) {
 					Team team1 = teams.get(team1Index);
-					parameters.putAll(generateParameters(meldeboegenType, team1, 1, Optional.empty()));
+					parameters.putAll(generateParameters(meldeboegenType, team1, 1, Optional.of(title)));
 				}
 				Integer team2Index = i*2+1;
 				if (team2Index+1 <= numberOfTeams) {
 					Team team2 = teams.get(team2Index);
-					parameters.putAll(generateParameters(meldeboegenType, team2, 2, Optional.empty()));
+					parameters.putAll(generateParameters(meldeboegenType, team2, 2, Optional.of(title)));
 				}
 				JasperPrint jasperPrint = JasperFillManager.fillReport(jasperReport,  parameters, new JREmptyDataSource());
 				jasperPrints.add(jasperPrint);
@@ -172,7 +172,8 @@ public class MeldeboegenAnreiseGenerator {
 			Integer playerNumber = 1;
 			for (Player player : team.getPlayers()) {
 				parameters.put("player" + playerNumber + ".name", player.getName());
-				parameters.put("player" + playerNumber + ".dwz", player.getDwzRating().toString());
+				parameters.put("player" + playerNumber + ".dwz",
+						player.getDwzRating() == 0 ? "" : player.getDwzRating().toString());
 				parameters.put("player" + playerNumber + ".ageGroup", player.getAgeGroup().name());
 				playerNumber++;
 			}
@@ -182,6 +183,24 @@ public class MeldeboegenAnreiseGenerator {
 				parameters.put("player" + playerNumber + ".name", "");
 				parameters.put("player" + playerNumber + ".dwz", "");
 				parameters.put("player" + playerNumber + ".ageGroup", "");
+			}
+		} else if (meldeboegenType.equals(MeldeboegenType.ROUND_DVM)) {
+			parameters.put("team" + teamNumber + ".name", team.getName());
+			titleOptional.ifPresentOrElse(
+					title -> parameters.put("ageGroup", title),
+					() -> parameters.put("ageGroup", "")
+			);
+
+			Integer playerNumber = 1;
+			for (Player player : team.getPlayers()) {
+				String playerString = player.getName();
+				parameters.put("team" + teamNumber + ".player" + playerNumber, playerString);
+				playerNumber++;
+			}
+
+			// If playerNumber stayed lower than 10, then the players have to be initialized with "".
+			for (; playerNumber <= 10; playerNumber++) {
+				parameters.put("team" + teamNumber + ".player" + playerNumber, "");
 			}
 		}
 		

@@ -70,4 +70,22 @@ public class MeldeboegenAnreiseController {
 				.body(result.getFileByteArray());
 	}
 
+	@GetMapping("generateRundeBogenDvm")
+	public ResponseEntity<byte[]> generateRundeBogenDvm(@RequestParam("ageGroup") String ageGroup) throws JRException {
+		PdfGenerationResult result = pdfGenerator.generateReport(MeldeboegenType.ROUND_DVM, ageGroup);
+
+		if (result.getResultCode().isError()) {
+			System.out.println("Exporting RUNDE (Dvm) was not successful");
+			System.out.println("Message is: " + result.getMessage());
+		}
+		else {
+			System.out.println("Exporting RUNDE (Dvm) was successful");
+		}
+
+		return ResponseEntity.ok()
+				.header("Content-Type", "application/pdf; charset=UTF-8")
+				.header("Content-Disposition", "inline; filename=\"" + MeldeboegenType.ROUND_DVM.getFilename() + "\"")
+				.body(result.getFileByteArray());
+	}
+
 }

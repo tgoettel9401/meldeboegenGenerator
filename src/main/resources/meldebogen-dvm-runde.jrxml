@@ -33,6 +33,7 @@
 	<parameter name="team2.player8" class="java.lang.String"/>
 	<parameter name="team2.player9" class="java.lang.String"/>
 	<parameter name="team2.player10" class="java.lang.String"/>
+	<parameter name="ageGroup" class="java.lang.String"/>
 	<queryString>
 		<![CDATA[]]>
 	</queryString>
@@ -59,7 +60,10 @@
 				<textFieldExpression><![CDATA[$P{team1.name}]]></textFieldExpression>
 			</textField>
 			<rectangle>
-				<reportElement x="0" y="462" width="380" height="60" uuid="f97f8a79-1179-4404-8979-39151ba2b1cb"/>
+				<reportElement x="0" y="462" width="380" height="60" uuid="f97f8a79-1179-4404-8979-39151ba2b1cb">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 			</rectangle>
 			<rectangle>
 				<reportElement x="10" y="502" width="289" height="1" uuid="83978265-d73b-4d89-8be4-f4c26eaecafd"/>
@@ -73,7 +77,7 @@
 				<imageExpression><![CDATA["dsj-image.JPG"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="0" y="77" width="40" height="35" uuid="b269dc7e-cbb5-4b01-aeee-2075157baa16"/>
+				<reportElement x="0" y="77" width="40" height="55" uuid="b269dc7e-cbb5-4b01-aeee-2075157baa16"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -86,7 +90,7 @@
 				<text><![CDATA[NR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="40" y="77" width="299" height="35" uuid="480b623c-0555-4d64-ad12-088e2df7e8fe"/>
+				<reportElement x="40" y="77" width="299" height="55" uuid="480b623c-0555-4d64-ad12-088e2df7e8fe"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -99,7 +103,7 @@
 				<text><![CDATA[Spieler]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="338" y="77" width="42" height="35" uuid="ae4153d7-b3ba-4dc2-866d-6a8e777da891"/>
+				<reportElement x="338" y="77" width="42" height="55" uuid="ae4153d7-b3ba-4dc2-866d-6a8e777da891"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -112,240 +116,168 @@
 				<text><![CDATA[MF]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="77" width="40" height="35" uuid="a62f8268-4d1c-478c-958e-3ee91f5d10e4">
+				<reportElement mode="Transparent" x="0" y="77" width="40" height="55" uuid="a62f8268-4d1c-478c-958e-3ee91f5d10e4">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="40" y="77" width="299" height="35" uuid="fb3abe02-7d6c-4c6d-a678-b6151ac3764f">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="40" y="77" width="299" height="55" uuid="fb3abe02-7d6c-4c6d-a678-b6151ac3764f">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="77" width="41" height="35" uuid="c15833bf-12f6-4219-92c0-24a922d5fc9d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="112" width="40" height="35" uuid="07afc380-2ca3-4338-bbf9-60e24e7edd2c">
+				<reportElement mode="Transparent" x="339" y="77" width="41" height="55" uuid="c15833bf-12f6-4219-92c0-24a922d5fc9d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="147" width="40" height="35" uuid="fdaf32c3-9d98-4774-8eb3-0d683639016c">
+				<reportElement mode="Transparent" x="0" y="132" width="40" height="55" uuid="07afc380-2ca3-4338-bbf9-60e24e7edd2c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="187" width="40" height="55" uuid="fdaf32c3-9d98-4774-8eb3-0d683639016c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="297" width="40" height="55" uuid="0cd9745b-ea1c-4d31-aa49-912e5795f581">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="182" width="40" height="35" uuid="0cd9745b-ea1c-4d31-aa49-912e5795f581">
+				<reportElement mode="Transparent" x="0" y="352" width="40" height="55" uuid="3aefdf40-725c-43f2-9dbb-c0f234330a05">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="352" width="40" height="55" uuid="bbedee1c-8b7d-4464-8c23-d034b760b531">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="217" width="40" height="35" uuid="3aefdf40-725c-43f2-9dbb-c0f234330a05">
+				<reportElement mode="Transparent" x="0" y="407" width="40" height="55" uuid="6dabd88c-225b-40fe-9a3f-6b01565d27bf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="40" y="407" width="299" height="55" uuid="65a62a22-bd4e-4fe5-a689-2f945c61c6a1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="40" y="352" width="299" height="55" uuid="c9f56e8b-2f05-4720-98cf-515b09049a52">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="252" width="40" height="35" uuid="bbedee1c-8b7d-4464-8c23-d034b760b531">
+				<reportElement mode="Transparent" x="40" y="297" width="299" height="55" uuid="8e4d1efa-cb9d-4068-8e83-6781c94a8b26">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="40" y="242" width="299" height="55" uuid="c97b6dd1-9fa8-4240-9030-adb1c4c517c0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="40" y="132" width="299" height="55" uuid="6054b29e-5604-4125-9af4-9902afb3a783">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="287" width="40" height="35" uuid="6dabd88c-225b-40fe-9a3f-6b01565d27bf">
+				<reportElement mode="Transparent" x="40" y="187" width="299" height="55" uuid="9f29f08e-1dde-4814-bf6e-92dac69f175e">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="322" width="40" height="35" uuid="255c4de6-ff70-4867-85c2-dcd5de530f1e">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="339" y="352" width="41" height="55" uuid="b5912b21-8c83-419c-9c49-4bdffe2fbe16"/>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="339" y="132" width="41" height="55" uuid="ce1c178e-1251-4d95-99bb-e91cecbc97cc">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="357" width="40" height="35" uuid="3a7c1569-45eb-47ee-a585-cc3823213151">
+				<reportElement mode="Transparent" x="339" y="297" width="41" height="55" uuid="3b5337ec-4264-47a7-a4d3-f2872e70c5f6">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="392" width="40" height="35" uuid="89d0fd6a-aa80-4183-a57c-63213479e4c2">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				<reportElement mode="Transparent" x="339" y="187" width="41" height="55" uuid="06745f1e-afe5-4cf5-ba6d-09a58c757d4a">
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="0" y="427" width="40" height="35" uuid="be76cb96-17a7-4153-b739-d5a0d1ff4af9">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
+				<reportElement mode="Transparent" x="339" y="407" width="41" height="55" uuid="dba7d402-cb1d-442b-91fb-f7609b0ef8f5"/>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="40" y="287" width="299" height="35" uuid="65a62a22-bd4e-4fe5-a689-2f945c61c6a1">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="252" width="299" height="35" uuid="c9f56e8b-2f05-4720-98cf-515b09049a52">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="322" width="299" height="35" uuid="02cfae3c-64d3-4da3-9edf-ed7976f56722">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="357" width="299" height="35" uuid="ab7e46ec-d4cf-4ccc-97a4-1c669eb2c0fe">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="217" width="299" height="35" uuid="8e4d1efa-cb9d-4068-8e83-6781c94a8b26">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="427" width="299" height="35" uuid="6a375400-3f23-4f37-87d3-10da2103af94">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="182" width="299" height="35" uuid="c97b6dd1-9fa8-4240-9030-adb1c4c517c0">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="392" width="299" height="35" uuid="8287c27a-c996-466b-a11d-0ee3508cbbc0">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="112" width="299" height="35" uuid="6054b29e-5604-4125-9af4-9902afb3a783">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="40" y="147" width="299" height="35" uuid="9f29f08e-1dde-4814-bf6e-92dac69f175e">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="322" width="41" height="35" uuid="e30dc348-ae1c-4e88-a257-5510cac0fff6">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="392" width="41" height="35" uuid="44df5594-d92e-4296-bded-e0cc7bef1fa9">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="357" width="41" height="35" uuid="5fa4fb3b-1037-4d2c-bc8d-b54998c45f76">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="252" width="41" height="35" uuid="b5912b21-8c83-419c-9c49-4bdffe2fbe16">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="112" width="41" height="35" uuid="ce1c178e-1251-4d95-99bb-e91cecbc97cc">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="217" width="41" height="35" uuid="3b5337ec-4264-47a7-a4d3-f2872e70c5f6">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="427" width="41" height="35" uuid="e4570e25-7d04-4a6c-a703-cb54d7b81b42">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="147" width="41" height="35" uuid="06745f1e-afe5-4cf5-ba6d-09a58c757d4a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="287" width="41" height="35" uuid="dba7d402-cb1d-442b-91fb-f7609b0ef8f5">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="339" y="182" width="41" height="35" uuid="a777ccb4-7b3a-44fd-b4fb-f2a6cc29d735">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
+				<reportElement mode="Transparent" x="339" y="242" width="41" height="55" uuid="a777ccb4-7b3a-44fd-b4fb-f2a6cc29d735"/>
 			</rectangle>
 			<textField>
-				<reportElement x="40" y="112" width="299" height="35" uuid="c87860ca-d1ca-4560-ba90-39252f982958"/>
+				<reportElement x="40" y="132" width="299" height="55" uuid="c87860ca-d1ca-4560-ba90-39252f982958">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team1.player1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="147" width="299" height="35" uuid="5ec625e4-a158-4f27-9c19-7af6e67ad68d"/>
+				<reportElement x="40" y="187" width="299" height="55" uuid="5ec625e4-a158-4f27-9c19-7af6e67ad68d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team1.player2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="182" width="299" height="35" uuid="6238aae8-bbd7-4fb4-ab57-873af0a6eec9"/>
+				<reportElement x="40" y="242" width="299" height="55" uuid="6238aae8-bbd7-4fb4-ab57-873af0a6eec9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team1.player3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="216" width="299" height="35" uuid="382008e8-89db-4b1a-a656-da00da169ebb"/>
+				<reportElement x="40" y="297" width="299" height="55" uuid="382008e8-89db-4b1a-a656-da00da169ebb">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.y" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team1.player4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="252" width="299" height="35" uuid="552f9f9c-af15-4b84-b874-80541721dfe1"/>
+				<reportElement x="40" y="352" width="299" height="55" uuid="552f9f9c-af15-4b84-b874-80541721dfe1">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team1.player5}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="40" y="287" width="299" height="35" uuid="5982abdb-6f26-4fc1-90c1-61e60b13cd1b"/>
+				<reportElement x="40" y="407" width="299" height="55" uuid="5982abdb-6f26-4fc1-90c1-61e60b13cd1b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team1.player6}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="40" y="322" width="299" height="35" uuid="be786627-8376-49b9-916b-4aed24bb7311"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{team1.player7}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="40" y="357" width="299" height="35" uuid="d7d03bc8-0c75-4800-bc9f-c80e0f241634"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{team1.player8}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="40" y="392" width="299" height="35" uuid="51cfcf32-0bb9-4aa6-8f7c-fcbf5c012f35"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{team1.player9}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="40" y="427" width="299" height="35" uuid="a76db31b-57a8-4153-9951-a32504c3e9b9"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{team1.player10}]]></textFieldExpression>
 			</textField>
 			<rectangle>
 				<reportElement x="420" y="1" width="380" height="467" uuid="19e4f353-0f59-4579-bcc4-9bc830f4ffe6"/>
@@ -379,7 +311,7 @@
 				<imageExpression><![CDATA["dsj-image.JPG"]]></imageExpression>
 			</image>
 			<staticText>
-				<reportElement x="420" y="78" width="40" height="35" uuid="c06f5391-013b-45f5-aaa1-819e71d26587"/>
+				<reportElement x="420" y="77" width="40" height="55" uuid="c06f5391-013b-45f5-aaa1-819e71d26587"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -392,7 +324,7 @@
 				<text><![CDATA[NR]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="460" y="78" width="296" height="35" uuid="6ba911fb-8fc9-416e-9c5e-7f1c9c1d0393"/>
+				<reportElement x="460" y="77" width="299" height="55" uuid="6ba911fb-8fc9-416e-9c5e-7f1c9c1d0393"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -405,7 +337,7 @@
 				<text><![CDATA[Spieler]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="758" y="78" width="42" height="35" uuid="3fa6382e-1397-4fc0-b3a5-2a1dea51f5d1"/>
+				<reportElement x="759" y="77" width="41" height="55" uuid="3fa6382e-1397-4fc0-b3a5-2a1dea51f5d1"/>
 				<box>
 					<topPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					<leftPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
@@ -418,241 +350,202 @@
 				<text><![CDATA[MF]]></text>
 			</staticText>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="78" width="40" height="35" uuid="e80e01da-8f49-478f-a24d-435165b71594">
+				<reportElement mode="Transparent" x="420" y="77" width="40" height="55" uuid="e80e01da-8f49-478f-a24d-435165b71594">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="78" width="299" height="35" uuid="15e33e70-f1ed-49e4-8aa5-ef015bc68079">
+				<reportElement mode="Transparent" x="460" y="77" width="299" height="55" uuid="15e33e70-f1ed-49e4-8aa5-ef015bc68079">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="758" y="78" width="42" height="35" uuid="6ef10d8c-00a6-4d99-bbfb-60937f7caf90">
+				<reportElement mode="Transparent" x="758" y="77" width="41" height="55" uuid="6ef10d8c-00a6-4d99-bbfb-60937f7caf90">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="113" width="40" height="35" uuid="558ecad4-3425-4b85-8256-e210fcfcd34a">
+				<reportElement mode="Transparent" x="420" y="132" width="40" height="55" uuid="558ecad4-3425-4b85-8256-e210fcfcd34a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="148" width="40" height="35" uuid="8ec791c9-36fc-458d-915a-43f2e4f67bd3">
+				<reportElement mode="Transparent" x="420" y="187" width="40" height="55" uuid="8ec791c9-36fc-458d-915a-43f2e4f67bd3">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="183" width="40" height="35" uuid="d3b3c78c-2be2-4963-b2e8-59f7889d5082">
+				<reportElement mode="Transparent" x="420" y="242" width="40" height="55" uuid="d3b3c78c-2be2-4963-b2e8-59f7889d5082">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="218" width="40" height="35" uuid="a6bb11a9-334c-4815-9ef8-bdf031403a08">
+				<reportElement mode="Transparent" x="420" y="297" width="40" height="55" uuid="a6bb11a9-334c-4815-9ef8-bdf031403a08">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="253" width="40" height="35" uuid="f72354dc-17d4-4d4f-8cca-da85775991cd">
+				<reportElement mode="Transparent" x="420" y="352" width="40" height="55" uuid="f72354dc-17d4-4d4f-8cca-da85775991cd">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="288" width="40" height="35" uuid="48d6094d-53d5-4fb1-8227-2e4357367898">
+				<reportElement mode="Transparent" x="420" y="407" width="40" height="55" uuid="48d6094d-53d5-4fb1-8227-2e4357367898">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="323" width="40" height="35" uuid="0270a778-4a07-454b-ad05-4b1c23579c20">
+				<reportElement mode="Transparent" x="460" y="132" width="299" height="55" uuid="0936355a-2a15-4393-8ae1-35e1f30e9ba4">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="358" width="40" height="35" uuid="0a339893-a6bb-49ff-9f84-5826aca3dcc0">
+				<reportElement mode="Transparent" x="460" y="187" width="299" height="55" uuid="f5409770-04da-405b-a12a-556ec667a875">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="393" width="40" height="35" uuid="827785cb-e763-43b1-b6bb-d1143497758b">
+				<reportElement mode="Transparent" x="460" y="242" width="299" height="55" uuid="a3dfc874-3474-4b31-b01d-1ece98fae6cc">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="420" y="428" width="40" height="35" uuid="f2cc8a03-e102-42d7-b5e6-a810dd6393ee">
+				<reportElement mode="Transparent" x="460" y="297" width="299" height="55" uuid="614fb0b2-f5d9-4929-977c-79f938be5fdd">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="288" width="299" height="35" uuid="0936355a-2a15-4393-8ae1-35e1f30e9ba4">
+				<reportElement mode="Transparent" x="460" y="352" width="299" height="55" uuid="5c6f5645-5bf2-42c5-a3fc-4323ddac60dd">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="253" width="299" height="35" uuid="f5409770-04da-405b-a12a-556ec667a875">
+				<reportElement mode="Transparent" x="460" y="407" width="299" height="55" uuid="8c6fa907-08b3-4b9d-8da2-03167e07ba30">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="323" width="299" height="35" uuid="51422cb9-5d80-4a28-93d2-5c4e0690c554">
+				<reportElement mode="Transparent" x="759" y="132" width="41" height="55" uuid="7846648e-8cb2-4c15-abef-8a7a060a3686">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="358" width="299" height="35" uuid="1e9c856d-3abb-4063-a0ef-328f2e4f7559">
+				<reportElement mode="Transparent" x="759" y="187" width="41" height="55" uuid="fa696fe1-38bd-486c-852d-1a0aca0f163d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="218" width="299" height="35" uuid="a3dfc874-3474-4b31-b01d-1ece98fae6cc">
+				<reportElement mode="Transparent" x="759" y="242" width="41" height="55" uuid="3a5f270a-b95b-41c8-b6a6-51f47afd5915">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="428" width="299" height="35" uuid="b28c1445-f94f-4d8a-a133-7756f243966b">
+				<reportElement mode="Transparent" x="759" y="297" width="41" height="55" uuid="f97a8f26-3be6-4e5a-907f-29e70de2a845">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="183" width="299" height="35" uuid="614fb0b2-f5d9-4929-977c-79f938be5fdd">
+				<reportElement mode="Transparent" x="759" y="352" width="41" height="55" uuid="66037efa-34b5-4d99-8081-2d16e44b4c3c">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<rectangle>
-				<reportElement mode="Transparent" x="460" y="393" width="299" height="35" uuid="6df28645-3a75-4007-a1db-138faba14bb7">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="460" y="113" width="299" height="35" uuid="5c6f5645-5bf2-42c5-a3fc-4323ddac60dd">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="460" y="148" width="299" height="35" uuid="8c6fa907-08b3-4b9d-8da2-03167e07ba30">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="323" width="41" height="35" uuid="dde11ef3-c131-4ae7-b65b-c284cb7fc281">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="393" width="41" height="35" uuid="573fd077-7b15-4b8a-b677-fb42fc430074">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="358" width="41" height="35" uuid="5cd858d1-a830-4d2f-b754-146223d16722">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="253" width="41" height="35" uuid="7846648e-8cb2-4c15-abef-8a7a060a3686">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="113" width="41" height="35" uuid="fa696fe1-38bd-486c-852d-1a0aca0f163d">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="218" width="41" height="35" uuid="3a5f270a-b95b-41c8-b6a6-51f47afd5915">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="428" width="41" height="35" uuid="6b377fd4-037e-40af-ac2d-4f533951a32f">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="148" width="41" height="35" uuid="f97a8f26-3be6-4e5a-907f-29e70de2a845">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="288" width="41" height="35" uuid="66037efa-34b5-4d99-8081-2d16e44b4c3c">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-				</reportElement>
-			</rectangle>
-			<rectangle>
-				<reportElement mode="Transparent" x="759" y="183" width="41" height="35" uuid="5d6aa122-204b-4ce2-918f-0e2d7e06fafa">
+				<reportElement mode="Transparent" x="759" y="407" width="41" height="55" uuid="5d6aa122-204b-4ce2-918f-0e2d7e06fafa">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 			</rectangle>
 			<textField>
-				<reportElement x="461" y="114" width="296" height="35" uuid="b2155447-ea9a-49e9-b110-cad019c17cf6"/>
+				<reportElement x="460" y="132" width="299" height="55" uuid="b2155447-ea9a-49e9-b110-cad019c17cf6">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player1}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="461" y="149" width="296" height="35" uuid="80c773ee-a425-4ddb-9b57-4b9ead5430dc"/>
+				<reportElement x="460" y="187" width="299" height="55" uuid="80c773ee-a425-4ddb-9b57-4b9ead5430dc"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player2}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="461" y="184" width="298" height="35" uuid="79415e6b-03ab-48e9-bca3-23004297b9cd"/>
+				<reportElement x="460" y="242" width="299" height="55" uuid="79415e6b-03ab-48e9-bca3-23004297b9cd"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player3}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="460" y="217" width="296" height="35" uuid="28117848-e5d8-439f-8669-f69572e4b636"/>
+				<reportElement x="460" y="297" width="299" height="55" uuid="28117848-e5d8-439f-8669-f69572e4b636"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player4}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="461" y="254" width="294" height="35" uuid="800b9865-a881-4e41-ba56-cfc581944db2"/>
+				<reportElement x="460" y="352" width="299" height="55" uuid="800b9865-a881-4e41-ba56-cfc581944db2"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player5}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="461" y="289" width="294" height="35" uuid="726908bb-27dd-4aec-8fbb-8d7da12c6e7f"/>
+				<reportElement x="460" y="407" width="299" height="55" uuid="726908bb-27dd-4aec-8fbb-8d7da12c6e7f"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player6}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="461" y="324" width="296" height="35" uuid="0ed27b1b-8988-44f8-83fc-5e3e2fa296c8"/>
+				<reportElement x="314" y="4" width="58" height="21" uuid="bd607aad-80f2-42be-b6d3-c4c39f3e2ce6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{team2.player7}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{ageGroup}]]></textFieldExpression>
 			</textField>
+			<rectangle>
+				<reportElement x="233" y="4" width="81" height="21" uuid="1da86ddd-b528-4219-abfe-30093e01820b"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="232" y="4" width="58" height="21" uuid="113c7f21-352e-422d-b82a-1d5ba7ffd2df"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Runde: ]]></text>
+			</staticText>
 			<textField>
-				<reportElement x="461" y="359" width="296" height="35" uuid="edfe079b-b676-4c00-aa6e-14eaa95412a7"/>
+				<reportElement x="731" y="4" width="58" height="21" uuid="bd607aad-80f2-42be-b6d3-c4c39f3e2ce6"/>
+				<box>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#000000"/>
+				</box>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font size="14"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$P{team2.player8}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$P{ageGroup}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement x="461" y="394" width="298" height="35" uuid="e2407473-8073-4157-a208-169357bc8811"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{team2.player9}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement x="461" y="429" width="294" height="35" uuid="657e9c13-a52d-42f6-b08e-714b18c11389"/>
-				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="14"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$P{team2.player10}]]></textFieldExpression>
-			</textField>
+			<staticText>
+				<reportElement x="660" y="0" width="58" height="21" uuid="3f917d6a-8278-495c-b950-d02f3922491b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Runde: ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="652" y="4" width="81" height="21" uuid="878bf31f-f1c7-495f-82bf-bc9b3e96b2f1"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="652" y="4" width="58" height="21" uuid="6ec62c13-20eb-4f17-9e29-732f29b917cb"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Runde: ]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
