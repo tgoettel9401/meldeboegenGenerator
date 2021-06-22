@@ -184,7 +184,7 @@
 				<text><![CDATA[Mannschaftsaufstellung]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="32" y="150" width="478" height="90" uuid="15019b5c-29f8-47ad-8560-c22bd6c42d14"/>
+				<reportElement x="32" y="150" width="478" height="100" uuid="15019b5c-29f8-47ad-8560-c22bd6c42d14"/>
 				<textElement>
 					<font size="8"/>
 				</textElement>
