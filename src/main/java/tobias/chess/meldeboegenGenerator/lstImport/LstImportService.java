@@ -1,6 +1,9 @@
 package tobias.chess.meldeboegenGenerator.lstImport;
 
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.StandardCharsets;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -57,7 +60,7 @@ public class LstImportService {
 		List<LstImportEntry> csvEntries = csvMapper
 				.readerFor(LstImportEntry.class)
 				.with(csvSchema)
-				.<LstImportEntry>readValues(lstImportFile.getInputStream())
+				.<LstImportEntry>readValues(convertLatin1InputStreamToUtf8(lstImportFile.getInputStream()))
 				.readAll();
 		
 		// Generate and import Players
@@ -91,6 +94,10 @@ public class LstImportService {
 		
 		return players;
 		
+	}
+
+	private InputStreamReader convertLatin1InputStreamToUtf8(InputStream latin1Stream) {
+		return new InputStreamReader(latin1Stream, StandardCharsets.ISO_8859_1);
 	}
 
 }
