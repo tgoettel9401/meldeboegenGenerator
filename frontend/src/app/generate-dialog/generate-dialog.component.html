@@ -1,0 +1,22 @@
+<h1 mat-dialog-title>Generate PDF Details</h1>
+
+<mat-dialog-content>
+  <p>Please decide the type you want to export</p>
+  <mat-form-field appearance="outline" [formControl]="typeControl">
+    <mat-label>Type</mat-label>
+    <mat-select required [(ngModel)]="type" [value]="type">
+      <mat-option value="dlm">DLM</mat-option>
+      <mat-option value="dvm">DVM</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p>If you selected DVM, please also provide a proper title</p>
+  <mat-form-field appearance="outline" [formControl]="titleControl">
+    <mat-label>Text</mat-label>
+    <input matInput [disabled]="type=='dlm'" [(ngModel)]="title">
+  </mat-form-field>
+</mat-dialog-content>
+
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="onOkClick()">Ok</button>
+</mat-dialog-actions>

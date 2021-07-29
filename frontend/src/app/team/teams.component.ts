@@ -1,25 +1,27 @@
-import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
+import {AfterContentInit, AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
 import {DataService} from "../data.service";
 import {Team} from "../models/team";
-import {TeamPlayersComponent} from "../team-players/team-players.component";
+import {MatDialog} from "@angular/material/dialog";
+import {GenerateDialogComponent} from "../generate-dialog/generate-dialog.component";
 
 @Component({
   selector: 'app-teams',
   templateUrl: './teams.component.html',
   styleUrls: ['./teams.component.css']
 })
-export class TeamsComponent implements AfterViewInit {
+export class TeamsComponent implements AfterContentInit {
 
   teams?: Team[];
   fileName?: string;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService,
+              private dialog: MatDialog) { }
 
   ngOnInit(): void {
 
   }
 
-  ngAfterViewInit(): void {
+  ngAfterContentInit (): void {
     this.getAllTeamsIncludingPlayers()
   }
 
@@ -57,5 +59,15 @@ export class TeamsComponent implements AfterViewInit {
         () => this.reloadData()
       );
     }
+  }
+
+  loadResultDialog() {
+    const dialogRef = this.dialog.open(GenerateDialogComponent, {
+      width: '250px',
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('The dialog was closed');
+    });
   }
 }

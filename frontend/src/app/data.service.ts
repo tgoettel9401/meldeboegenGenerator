@@ -9,6 +9,7 @@ import {Team} from "./models/team";
 export class DataService {
 
   baseUri = 'https://dsj-meldebogen-generator.herokuapp.com';
+  //baseUri = '//localhost:8080';
 
   constructor(private httpClient: HttpClient) { }
 
