@@ -1,23 +1,48 @@
 <mat-table [dataSource]="dataSource" style="border: 1px lightgray solid">
-  <!-- User name Definition -->
-  <ng-container matColumnDef="username">
-    <mat-header-cell *matHeaderCellDef> User name </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.username}} </mat-cell>
+
+  <!-- Name Definition -->
+  <ng-container matColumnDef="name" style="width: 100px">
+    <mat-header-cell *matHeaderCellDef> Player Name </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.name}} </mat-cell>
   </ng-container>
 
-  <!-- Age Definition -->
-  <ng-container matColumnDef="age">
-    <mat-header-cell *matHeaderCellDef> Age </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.age}} </mat-cell>
+  <!-- ELO Definition -->
+  <ng-container matColumnDef="elo">
+    <mat-header-cell *matHeaderCellDef> Elo </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.eloRating}} </mat-cell>
   </ng-container>
 
-  <!-- Title Definition -->
-  <ng-container matColumnDef="title">
-    <mat-header-cell *matHeaderCellDef> Title </mat-header-cell>
-    <mat-cell *matCellDef="let row"> {{row.title}} </mat-cell>
+  <!-- DWZ Definition -->
+  <ng-container matColumnDef="dwz">
+    <mat-header-cell *matHeaderCellDef> DWZ </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.dwzRating}} </mat-cell>
+  </ng-container>
+
+  <!-- DWZ Definition -->
+  <ng-container matColumnDef="fideTitle">
+    <mat-header-cell *matHeaderCellDef> Fide-Title </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.fideTitle}} </mat-cell>
+  </ng-container>
+
+  <!-- DWZ Definition -->
+  <ng-container matColumnDef="birthday">
+    <mat-header-cell *matHeaderCellDef> Birthday </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.birthDay}} </mat-cell>
+  </ng-container>
+
+  <!-- DWZ Definition -->
+  <ng-container matColumnDef="gender">
+    <mat-header-cell *matHeaderCellDef> Gender </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.gender}} </mat-cell>
+  </ng-container>
+
+  <!-- DWZ Definition -->
+  <ng-container matColumnDef="ageGroup">
+    <mat-header-cell *matHeaderCellDef> Age-Group </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.ageGroup}} </mat-cell>
   </ng-container>
 
   <!-- Header and Row Declarations -->
-  <mat-header-row *matHeaderRowDef="['username', 'age', 'title']"></mat-header-row>
-  <mat-row *matRowDef="let row; columns: ['username', 'age', 'title']"></mat-row>
+  <mat-header-row *matHeaderRowDef="['name', 'elo', 'dwz', 'fideTitle', 'birthday', 'gender', 'ageGroup']"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: ['name', 'elo', 'dwz', 'fideTitle', 'birthday', 'gender', 'ageGroup']"></mat-row>
 </mat-table>

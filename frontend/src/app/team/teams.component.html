@@ -1,11 +1,38 @@
+
 <div>
-  <mat-card class="teams-card">
+  &nbsp; &nbsp;
+  <button mat-raised-button color="primary" (click)="reloadData()">
+    Reload
+    <mat-icon>refresh</mat-icon>
+  </button>
+  &nbsp; &nbsp;
+  <button mat-raised-button color="warn" (click)="deleteData()">
+    Delete Data
+    <mat-icon>delete</mat-icon>
+  </button>
+
+  &nbsp; &nbsp;
+  <button mat-raised-button class="upload-btn" (click)="fileUpload.click()">
+    Upload File
+    <mat-icon>attach_file</mat-icon>
+  </button>
+
+</div>
+
+<br>
+
+<div *ngFor="let team of teams">
+  <mat-card class="teams-card" *ngIf="team">
     <mat-card-title>
-      Team-Name
+      {{team.name}}
     </mat-card-title>
     <br>
     <mat-card-content>
-      <app-team-players></app-team-players>
+      <app-team-players *ngIf="team" [team]="team"></app-team-players>
     </mat-card-content>
   </mat-card>
+  <br>
 </div>
+
+<input type="file" class="file-input"
+       (change)="onFileSelected($event)" #fileUpload>

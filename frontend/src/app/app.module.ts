@@ -16,6 +16,7 @@ import { TeamsComponent } from './team/teams.component';
 import {MatDividerModule} from "@angular/material/divider";
 import { TeamPlayersComponent } from './team-players/team-players.component';
 import {MatTableModule} from "@angular/material/table";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import {MatTableModule} from "@angular/material/table";
     TeamPlayersComponent,
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
     MatFormFieldModule,

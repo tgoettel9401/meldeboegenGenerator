@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
@@ -19,7 +20,8 @@ public class LstImportController {
 	public LstImportController(LstImportService lstImportService) {
 		this.lstImportService = lstImportService;
 	}
-	
+
+	@CrossOrigin(origins = "http://localhost:4200")
 	@PostMapping("importPlayersAndTeams")
 	public ResponseEntity<List<Player>> importCsv(@RequestParam("file") MultipartFile csvFile) throws Exception {
 		List<Player> importEntries = lstImportService.importLstEntries(csvFile);	

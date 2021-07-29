@@ -7,6 +7,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import lombok.Data;
 import tobias.chess.meldeboegenGenerator.team.Team;
 
@@ -18,6 +19,7 @@ public class Player {
 	private Long id; 
 	
 	@ManyToOne
+	@JsonBackReference
 	private Team team; 
 	
 	private String name;

@@ -3,3 +3,7 @@
   margin-right: 15px;
   border: 1px lightgrey solid;
 }
+
+.file-input {
+  display: none;
+}
