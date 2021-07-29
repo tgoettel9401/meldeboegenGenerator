@@ -101,21 +101,36 @@
 		<plugins>
 			<!-- Build frontend first -->
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>exec-maven-plugin</artifactId>
-				<version>1.6.0</version>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.7.6</version>
 				<executions>
 					<execution>
-						<phase>validate</phase>
+						<id>install node and npm</id>
 						<goals>
-							<goal>exec</goal>
+							<goal>install-node-and-npm</goal>
 						</goals>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>npm run build</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run build</arguments>
+						</configuration>
 					</execution>
 				</executions>
 				<configuration>
-					<executable>ng</executable>
-					<workingDirectory>frontend</workingDirectory>
-					<arguments>build</arguments>
+					<workingDirectory>./frontend/</workingDirectory>
+					<nodeVersion>v12.14.1</nodeVersion>
+					<npmVersion>6.13.4</npmVersion>
 				</configuration>
 			</plugin>
 			<plugin>
