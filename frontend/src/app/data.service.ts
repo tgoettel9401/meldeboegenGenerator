@@ -21,6 +21,6 @@ export class DataService {
   }
 
   uploadFile(formData: FormData) {
-    return this.httpClient.post(this.baseUri + 'importPlayersAndTeams', formData);
+    return this.httpClient.post(this.baseUri + '/importPlayersAndTeams', formData);
   }
 }
