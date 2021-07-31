@@ -63,7 +63,7 @@ export class TeamsComponent implements AfterContentInit {
 
   loadResultDialog() {
     const dialogRef = this.dialog.open(GenerateDialogComponent, {
-      width: '250px',
+      width: '500px',
     });
 
     dialogRef.afterClosed().subscribe(result => {

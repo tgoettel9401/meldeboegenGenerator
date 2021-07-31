@@ -2,14 +2,14 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import {Observable} from "rxjs";
 import {Team} from "./models/team";
+import {environment} from "../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
 
-  baseUri = 'https://dsj-meldebogen-generator.herokuapp.com';
-  //baseUri = '//localhost:8080';
+  baseUri = environment.backendBaseUri;
 
   constructor(private httpClient: HttpClient) { }
 

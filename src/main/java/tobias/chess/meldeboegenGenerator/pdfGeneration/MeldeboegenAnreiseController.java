@@ -57,7 +57,7 @@ public class MeldeboegenAnreiseController {
 		PdfGenerationResult result = pdfGenerator.generateReport(MeldeboegenType.ROUND_DLM, "");
 		
 		if (result.getResultCode().isError()) {
-			System.out.println("Exporting ANREISE was not successful");
+			System.out.println("Exporting RUNDE was not successful");
 			System.out.println("Message is: " + result.getMessage());
 		}
 		else {
