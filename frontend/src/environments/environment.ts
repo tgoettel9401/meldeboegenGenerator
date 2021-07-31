@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendBaseUri: 'https://dsj-meldebogen-generator.herokuapp.com',
+  backendBaseUri: '//localhost:8080',
 };
 
 /*

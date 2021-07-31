@@ -5,12 +5,13 @@
   <!-- Select Type -->
   <div>
     <p>Please decide the type you want to export</p>
-    <mat-form-field appearance="outline" [formControl]="typeControl">
+    <mat-form-field appearance="outline">
       <mat-label>Type</mat-label>
-      <mat-select required [(ngModel)]="type" [value]="type">
+      <mat-select [formControl]="typeControl" [(ngModel)]="type" [value]="type" required>
         <mat-option value="dlm">DLM</mat-option>
         <mat-option value="dvm">DVM</mat-option>
       </mat-select>
+      <mat-error *ngIf="typeControl.hasError('required')">Selecting a type is required!</mat-error>
     </mat-form-field>
   </div>
 
@@ -20,7 +21,7 @@
     <mat-form-field appearance="outline" [formControl]="titleControl">
       <mat-label>Title</mat-label>
       <input matInput [formControl]="titleControl" [(ngModel)]="title" [required]="type=='dvm'" [disabled]="type!='dvm'" >
-      <mat-error *ngIf="titleControl.hasError('required')">A title is required for DVM!</mat-error>
+      <mat-error *ngIf="titleControl.hasError('required')">Entering a title is required for DVM-type!</mat-error>
     </mat-form-field>
   </div>
 
@@ -33,7 +34,7 @@
         <mat-option value="anreise">Anreise</mat-option>
         <mat-option value="runde">Runde</mat-option>
       </mat-select>
-      <mat-error *ngIf="purposeControl.hasError('required')">A purpose is required for DLM!</mat-error>
+      <mat-error *ngIf="purposeControl.hasError('required')">Selecting a purpose is required for DLM-type!</mat-error>
     </mat-form-field>
   </div>
 
@@ -41,5 +42,5 @@
 
 <mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
-  <button mat-button (click)="onOkClick()">Ok</button>
+  <button mat-button (click)="onOkClick()" [disabled]="!formGroup.valid">Ok</button>
 </mat-dialog-actions>

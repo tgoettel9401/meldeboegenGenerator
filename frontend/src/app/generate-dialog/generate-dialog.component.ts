@@ -27,7 +27,7 @@ export class GenerateDialogComponent implements OnInit {
     purpose: this.purposeControl,
   });
 
-  type = 'DVM';
+  type = '';
   title = '';
   purpose = '';
 
@@ -36,8 +36,7 @@ export class GenerateDialogComponent implements OnInit {
     @Inject(MAT_DIALOG_DATA) public data: DialogData) {}
 
   ngOnInit(): void {
-    this.titleControl.markAsTouched();
-    this.purposeControl.markAsTouched();
+    this.formGroup.markAllAsTouched();
   }
 
   onNoClick(): void {
@@ -45,11 +44,11 @@ export class GenerateDialogComponent implements OnInit {
   }
 
   onOkClick() {
-
     // Generate bogen if form is valid, otherwise do nothing.
     if (this.formGroup.valid) {
       if (this.type == 'dlm') {
-        window.open(this.baseUri + this.purpose == 'anreise' ? '/generateAnreiseBogen' : '/generateRundeBogen');
+        const path = this.purpose == 'anreise' ? '/generateAnreiseBogen' : '/generateRundeBogen';
+        window.open(this.baseUri + path);
       } else {
         window.open(this.baseUri + '/generateAnreiseBogenDvm?title=' + this.title);
       }
