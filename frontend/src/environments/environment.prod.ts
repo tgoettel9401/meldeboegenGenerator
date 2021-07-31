@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  backendBaseUri: '//localhost:8080',
+  backendBaseUri: 'https://dsj-meldebogen-generator.herokuapp.com',
 };
