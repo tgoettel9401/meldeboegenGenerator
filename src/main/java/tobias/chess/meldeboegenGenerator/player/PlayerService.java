@@ -41,20 +41,21 @@ public class PlayerService {
 	}
 	
 	private LocalDate convertLstImportBirthdayToLocalDate(String lstImportBirthday) {
+
+		String trimmedBirthdayString = lstImportBirthday.trim();
 		
 		// Generate DateTimeFormatter for German format. 
 		DateTimeFormatter germanFormatter = DateTimeFormatter.ofLocalizedDate(
 		        FormatStyle.MEDIUM).withLocale(Locale.GERMAN);
 		
 		// The birthday may be 00.00.year, hence replace this with 01.01.
-		if (lstImportBirthday.startsWith("00.00")) {
-			lstImportBirthday= lstImportBirthday.replace("00.00", "01.01");
+		if (trimmedBirthdayString.startsWith("00.00")) {
+			trimmedBirthdayString= trimmedBirthdayString.replace("00.00", "01.01");
 		}
-		if (lstImportBirthday.length() == 4) {
-			lstImportBirthday = "01.01." + lstImportBirthday;
+		if (trimmedBirthdayString.length() == 4) {
+			trimmedBirthdayString = "01.01." + trimmedBirthdayString;
 		}
-		LocalDate birthDayInLocalDate = LocalDate.parse(lstImportBirthday, germanFormatter);
-		return birthDayInLocalDate;
+		return LocalDate.parse(trimmedBirthdayString, germanFormatter);
 	}
 
 }
