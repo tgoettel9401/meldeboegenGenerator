@@ -1,5 +1,4 @@
-import {AfterViewInit, Component, Input, OnInit, ViewChild} from '@angular/core';
-import {MatSort} from "@angular/material/sort";
+import {Component, Input, OnInit} from '@angular/core';
 import {MatTableDataSource} from "@angular/material/table";
 import {Team} from "../models/team";
 import {Player} from "../models/player";
@@ -9,14 +8,14 @@ import {Player} from "../models/player";
   templateUrl: './team-players.component.html',
   styleUrls: ['./team-players.component.css']
 })
-export class TeamPlayersComponent implements AfterViewInit {
+export class TeamPlayersComponent implements OnInit {
 
   @Input("team") team!: Team;
 
   displayedColumns: string[] = ['name', 'elo', 'dwz', 'fideTitle', 'birthday', 'gender', 'ageGroup'];
   dataSource!: MatTableDataSource<Player>;
 
-  ngAfterViewInit() {
+  ngOnInit() {
     this.updateTable();
   }
 

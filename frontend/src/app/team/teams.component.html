@@ -27,8 +27,8 @@
 
 <br>
 
-<div *ngFor="let team of teams">
-  <mat-card class="teams-card" *ngIf="team">
+<div *ngIf="teams">
+  <mat-card class="teams-card" *ngFor="let team of teams">
     <mat-card-title>
       {{team.name}}
     </mat-card-title>
