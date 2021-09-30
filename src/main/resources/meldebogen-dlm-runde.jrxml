@@ -66,7 +66,7 @@
 			</rectangle>
 			<staticText>
 				<reportElement x="19" y="505" width="251" height="17" uuid="4abf3356-450e-4acc-837d-de12fa959c60"/>
-				<text><![CDATA[Unterschrift Mannschaftsführer oder Betreuer]]></text>
+				<text><![CDATA[Unterschrift]]></text>
 			</staticText>
 			<image>
 				<reportElement x="320" y="467" width="50" height="50" uuid="20ebb6f1-2e32-428f-83a8-0ccf7e458aa2"/>
@@ -372,7 +372,7 @@
 			</rectangle>
 			<staticText>
 				<reportElement x="439" y="506" width="251" height="17" uuid="364fce63-1393-409e-adcf-2add50ba5d04"/>
-				<text><![CDATA[Unterschrift Mannschaftsführer oder Spieler]]></text>
+				<text><![CDATA[Unterschrift]]></text>
 			</staticText>
 			<image>
 				<reportElement x="740" y="468" width="50" height="50" uuid="1d57e789-21e1-40d0-9f44-54feea3d5479"/>
