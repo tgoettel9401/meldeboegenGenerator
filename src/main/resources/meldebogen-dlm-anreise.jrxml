@@ -177,7 +177,7 @@
 				<reportElement x="20" y="120" width="510" height="130" uuid="906f2e7e-8007-4855-8c9f-f731c759c86b"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="32" y="130" width="148" height="20" uuid="cbcd8d15-1a11-4788-92af-a63f84d39219"/>
+				<reportElement x="32" y="130" width="180" height="20" uuid="cbcd8d15-1a11-4788-92af-a63f84d39219"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
