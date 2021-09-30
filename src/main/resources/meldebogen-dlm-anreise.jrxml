@@ -160,14 +160,14 @@
 				<reportElement x="20" y="49" width="510" height="71" uuid="732e661a-39fa-4900-b8c6-627a3bc98b44"/>
 			</rectangle>
 			<staticText>
-				<reportElement x="32" y="56" width="90" height="20" uuid="4766a578-3b42-46b6-8843-66db5eeb9afc"/>
+				<reportElement x="32" y="200" width="90" height="20" uuid="4766a578-3b42-46b6-8843-66db5eeb9afc"/>
 				<textElement>
 					<font size="12" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Betreuungsperson]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="125" y="56" width="240" height="20" uuid="e24128aa-ee84-4682-99ae-10877de130ba"/>
+				<reportElement x="230" y="56" width="240" height="20" uuid="e24128aa-ee84-4682-99ae-10877de130ba"/>
 				<textElement>
 					<font size="12" isBold="false"/>
 				</textElement>
