@@ -55,6 +55,9 @@ public class PlayerService {
 		if (trimmedBirthdayString.length() == 4) {
 			trimmedBirthdayString = "01.01." + trimmedBirthdayString;
 		}
+		if (trimmedBirthdayString.length() == 0) {
+			trimmedBirthdayString = "01.01." + LocalDate.now().getYear();
+		}
 		return LocalDate.parse(trimmedBirthdayString, germanFormatter);
 	}
 
