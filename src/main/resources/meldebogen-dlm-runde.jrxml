@@ -653,6 +653,22 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$P{team2.player10}]]></textFieldExpression>
 			</textField>
+			<staticText>
+				<reportElement x="270" y="11" width="100" height="19" uuid="5555b82e-d785-481a-9f95-a168caa4f163"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Runde]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="340" y="30" width="31" height="31" uuid="d2637a55-82c4-42e4-85ae-37cea6184e0f"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="760" y="30" width="31" height="31" uuid="c922818a-07cb-4aaa-a01d-4a479613562f"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="690" y="11" width="100" height="19" uuid="47d6791c-a87c-4526-9b76-40a3a1151444"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Runde]]></text>
+			</staticText>
 		</band>
 	</detail>
 </jasperReport>
