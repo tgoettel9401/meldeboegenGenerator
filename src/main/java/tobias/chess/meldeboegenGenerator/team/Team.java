@@ -23,6 +23,10 @@ public class Team {
 	@ToString.Exclude
 	private List<Player> players; 
 	
-	private String name; 
+	private String name;
+
+	public Integer getPlayersSize() {
+		return players == null ? 0 : players.size();
+	}
 
 }

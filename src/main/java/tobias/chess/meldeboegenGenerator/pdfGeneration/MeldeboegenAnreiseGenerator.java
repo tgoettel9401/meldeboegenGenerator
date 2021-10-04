@@ -3,6 +3,7 @@ package tobias.chess.meldeboegenGenerator.pdfGeneration;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.InputStream;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.Optional;
@@ -103,6 +104,9 @@ public class MeldeboegenAnreiseGenerator {
 		}
 		
 		else { // MeldeboegenType = ROUND
+
+			// First sort the teams so that teams with > 8 players come first, after that sort alphabetically.
+			teams.sort(Comparator.comparingInt(Team::getPlayersSize).reversed());
 			
 			// A Meldebogen contains always two teams, hence we need NUMBER_OF_TEAMS / 2 (rounded up) Meldeboegen. 
 			int numberOfTeams = teams.size();
