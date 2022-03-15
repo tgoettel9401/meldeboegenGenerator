@@ -58,7 +58,7 @@
 	<title>
 		<band height="110" splitType="Stretch">
 			<image>
-				<reportElement x="430" y="0" width="100" height="100" uuid="4fe8f811-2a55-4ec1-bf34-ebbf733f6e3d"/>
+				<reportElement x="430" y="20" width="100" height="46" uuid="4fe8f811-2a55-4ec1-bf34-ebbf733f6e3d"/>
 				<imageExpression><![CDATA["DSJ_Logo.png"]]></imageExpression>
 			</image>
 			<textField>

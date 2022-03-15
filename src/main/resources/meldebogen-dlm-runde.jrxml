@@ -69,7 +69,7 @@
 				<text><![CDATA[Unterschrift]]></text>
 			</staticText>
 			<image>
-				<reportElement x="320" y="467" width="50" height="50" uuid="20ebb6f1-2e32-428f-83a8-0ccf7e458aa2"/>
+				<reportElement x="320" y="480" width="50" height="35" uuid="20ebb6f1-2e32-428f-83a8-0ccf7e458aa2"/>
 				<imageExpression><![CDATA["DSJ_Logo.png"]]></imageExpression>
 			</image>
 			<staticText>
@@ -375,7 +375,7 @@
 				<text><![CDATA[Unterschrift]]></text>
 			</staticText>
 			<image>
-				<reportElement x="740" y="468" width="50" height="50" uuid="1d57e789-21e1-40d0-9f44-54feea3d5479"/>
+				<reportElement x="740" y="480" width="50" height="50" uuid="1d57e789-21e1-40d0-9f44-54feea3d5479"/>
 				<imageExpression><![CDATA["DSJ_Logo.png"]]></imageExpression>
 			</image>
 			<staticText>
