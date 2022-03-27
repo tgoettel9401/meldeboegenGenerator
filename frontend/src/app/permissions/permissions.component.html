@@ -1,0 +1,25 @@
+<div>
+  &nbsp; &nbsp;
+  <button mat-raised-button color="secondary" (click)="reloadMivisData()">
+    Reload Mivis-Data
+    <mat-icon>refresh</mat-icon>
+  </button>
+  &nbsp; &nbsp;
+  <button mat-raised-button color="primary" (click)="loadResultCsv()">
+    Load Result Csv
+    <mat-icon>refresh</mat-icon>
+  </button>
+  &nbsp; &nbsp;
+  <span>Currently {{numberOfPlayers}} players</span>
+
+</div>
+
+<br>
+<div *ngIf="isRunning" style="margin-left: 10px">
+  <span>
+    <mat-spinner></mat-spinner>
+    <br>
+    <span>&nbsp; &nbsp; &nbsp; &nbsp;{{loadedProcesses}} of 17</span>
+  </span>
+
+</div>

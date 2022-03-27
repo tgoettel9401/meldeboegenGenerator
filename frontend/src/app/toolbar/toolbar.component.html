@@ -1,5 +1,12 @@
 <mat-toolbar color="primary">
-  <span>Meldebogen-Generator</span>
-  <span></span>
+  <button mat-icon-button [matMenuTriggerFor]="menu" class="example-icon" aria-label="Example icon-button with menu icon">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <span>DVM-Manager</span>
+
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item [routerLink]="'/teams'">Registration Sheets</button>
+    <button mat-menu-item  [routerLink]="'/permissions'">Permissions-Check</button>
+  </mat-menu>
 
 </mat-toolbar>

@@ -21,6 +21,12 @@ import {MatDialogModule} from "@angular/material/dialog";
 import { GenerateDialogComponent } from './generate-dialog/generate-dialog.component';
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatMenuModule} from '@angular/material/menu';
+import {RouterModule} from "@angular/router";
+import { PermissionsComponent } from './permissions/permissions.component';
+import {AppRoutingModule} from "./app-routing.module";
+import {MatProgressBarModule} from "@angular/material/progress-bar";
+import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 
 @NgModule({
   declarations: [
@@ -29,27 +35,33 @@ import {FormsModule, ReactiveFormsModule} from "@angular/forms";
     TeamsComponent,
     TeamPlayersComponent,
     GenerateDialogComponent,
+    PermissionsComponent,
   ],
-  imports: [
-    HttpClientModule,
-    BrowserModule,
-    BrowserAnimationsModule,
-    MatFormFieldModule,
-    MatSidenavModule,
-    MatOptionModule,
-    MatSelectModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatButtonModule,
-    MatCardModule,
-    MatDividerModule,
-    MatTableModule,
-    MatDialogModule,
-    MatInputModule,
-    MatSelectModule,
-    ReactiveFormsModule,
-    FormsModule,
-  ],
+    imports: [
+        HttpClientModule,
+        BrowserModule,
+        BrowserAnimationsModule,
+        MatFormFieldModule,
+        MatSidenavModule,
+        MatOptionModule,
+        MatSelectModule,
+        MatToolbarModule,
+        MatIconModule,
+        MatButtonModule,
+        MatCardModule,
+        MatDividerModule,
+        MatTableModule,
+        MatDialogModule,
+        MatInputModule,
+        MatSelectModule,
+        ReactiveFormsModule,
+        FormsModule,
+        MatMenuModule,
+        RouterModule,
+        AppRoutingModule,
+        MatProgressBarModule,
+        MatProgressSpinnerModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })
