@@ -8,7 +8,7 @@
 		<version>2.3.3.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>daimler.pea</groupId>
+	<groupId>tobias.chess</groupId>
 	<artifactId>meldeboegenGenerator</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>meldeboegenGenerator</name>
@@ -143,6 +143,39 @@
 		                </goals>
 		            </execution>
 		       </executions>
+			</plugin>
+
+			<!-- Plugin for deploying to Azure Appservice -->
+			<plugin>
+				<groupId>com.microsoft.azure</groupId>
+				<artifactId>azure-webapp-maven-plugin</artifactId>
+				<version>2.2.0</version>
+				<configuration>
+					<subscriptionId>c9276894-d170-4edf-8270-b27ac1165f5f</subscriptionId>
+					<resourceGroup>DSJ</resourceGroup>
+					<appName>meldebogen-generator</appName>
+					<pricingTier>F1</pricingTier>
+					<region>North Europe</region>
+					<runtime>
+						<os>Linux</os>
+						<webContainer>Java SE</webContainer>
+						<javaVersion>Java 11</javaVersion>
+					</runtime>
+					<appSettings>
+						<property>
+							<name>PORT</name>
+							<value>8081</value>
+						</property>
+					</appSettings>
+					<deployment>
+						<resources>
+							<resource>
+								<directory>${project.basedir}/target</directory>
+								<includes>meldeboegenGenerator-${project.version}.jar</includes>
+							</resource>
+						</resources>
+					</deployment>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
